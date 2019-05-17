@@ -10,14 +10,9 @@ namespace AbsolventskaApp.UserControls
 
         public Task1UserControl()
         {
-            Enabled = false;
+            //Enabled = false;
             index = 0;
             InitializeComponent();
-        }
-
-        private void TBAnswer1_Click(object sender, EventArgs e)
-        {
-            TBAnswer1.Text = string.Empty;
         }
 
         private void btnPlay_Click(object sender, EventArgs e)

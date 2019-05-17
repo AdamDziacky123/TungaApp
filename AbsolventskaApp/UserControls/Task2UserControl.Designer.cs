@@ -62,7 +62,6 @@
             this.TBAnswer2.TabIndex = 14;
             this.TBAnswer2.Text = "Type in the answer";
             this.TBAnswer2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TBAnswer2.Click += new System.EventHandler(this.TBAnswer2_Click);
             // 
             // pictureBox2
             // 

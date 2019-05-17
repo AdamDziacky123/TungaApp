@@ -14,11 +14,6 @@ namespace AbsolventskaApp.UserControls
             index = 19;
         }
 
-        private void TBAnswer1_Click(object sender, EventArgs e)
-        {
-            TBAnswer20.Text = string.Empty;
-        }
-
         private void btnPlay_Click(object sender, EventArgs e)
         {
             manager.Speak(manager.GetWord(this.index));
@@ -26,7 +21,6 @@ namespace AbsolventskaApp.UserControls
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            //manager.AddToAnswers((Form1)Form1.ActiveForm);
             manager.CheckAnswer(TBAnswer20, index);
         }
 

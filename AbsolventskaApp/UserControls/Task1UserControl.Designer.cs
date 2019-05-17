@@ -87,7 +87,6 @@
             this.TBAnswer1.TabIndex = 8;
             this.TBAnswer1.Text = "Type in the answer";
             this.TBAnswer1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TBAnswer1.Click += new System.EventHandler(this.TBAnswer1_Click);
             // 
             // btnPlay
             // 

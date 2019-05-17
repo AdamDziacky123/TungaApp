@@ -125,7 +125,6 @@
             this.Controls.Add(this.pictureBox12);
             this.Name = "Task12UserControl";
             this.Size = new System.Drawing.Size(1300, 900);
-            this.Load += new System.EventHandler(this.Task12UserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -62,7 +62,6 @@
             this.TBAnswer7.TabIndex = 20;
             this.TBAnswer7.Text = "Type in the answer";
             this.TBAnswer7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TBAnswer7.Click += new System.EventHandler(this.TBAnswer7_Click);
             // 
             // pictureBox7
             // 
@@ -127,7 +126,6 @@
             this.Enabled = false;
             this.Name = "Task7UserControl";
             this.Size = new System.Drawing.Size(1300, 900);
-            this.Load += new System.EventHandler(this.Task7UserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

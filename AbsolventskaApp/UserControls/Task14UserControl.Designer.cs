@@ -125,7 +125,6 @@
             this.Controls.Add(this.pictureBox14);
             this.Name = "Task14UserControl";
             this.Size = new System.Drawing.Size(1300, 900);
-            this.Load += new System.EventHandler(this.Task14UserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

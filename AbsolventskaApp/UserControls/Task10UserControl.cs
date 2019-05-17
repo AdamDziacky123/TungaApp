@@ -14,11 +14,6 @@ namespace AbsolventskaApp.UserControls
             index = 9;
         }
 
-        private void TBAnswer10_Click(object sender, EventArgs e)
-        {
-            TBAnswer10.Text = string.Empty;
-        }
-
         private void btnPlay_Click(object sender, EventArgs e)
         {
             manager.Speak(manager.GetWord(this.index));

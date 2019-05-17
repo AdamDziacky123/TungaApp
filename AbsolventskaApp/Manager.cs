@@ -196,10 +196,21 @@ namespace AbsolventskaApp
 
         public void SetUcPositions()
         {
+            int tmp = 1;
+
             foreach (UserControl UC in TaskUCList)
             {
                 UC.Location = taskPosition;
+                UC.Controls.Find(string.Format("TBAnswer{0}", tmp), true).FirstOrDefault().Click += new EventHandler(TBAnswerOnClick);
+                tmp++;
             }
+        }
+
+        private void TBAnswerOnClick(object sender, EventArgs e)
+        {
+            TextBox TB = sender as TextBox;
+
+            TB.Text = string.Empty;
         }
 
         public void LastUcBTNRemove()
@@ -207,9 +218,9 @@ namespace AbsolventskaApp
             TaskUCList[numOfTasks-1].Controls.Find("btnNext", true).FirstOrDefault().Visible = false;
             /*OtherUCList[0].Controls.Find("btnContinue", true).FirstOrDefault().Visible = false;
             OtherUCList[0].Controls.Find("btnConfirm", true).FirstOrDefault().Visible = true;*/
-        }
+    }
 
-        public void AssignTaskNum()
+    public void AssignTaskNum()
         {
             using (System.IO.StreamReader reader = new System.IO.StreamReader(path_words))
             {
