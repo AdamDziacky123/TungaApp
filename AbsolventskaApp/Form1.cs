@@ -19,10 +19,12 @@ namespace AbsolventskaApp///////////////////////////////////////////////////////
         public Form1()
         {
             InitializeComponent();
+
             manager.FillLists(this);
             manager.AssignTaskNum();
             manager.HideOtherTasks();
             manager.LastUcBTNRemove();
+            manager.SetUcPositions();
         }
 
         private void Form1_Load(object sender, EventArgs e)

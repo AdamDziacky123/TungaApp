@@ -14,12 +14,6 @@ namespace AbsolventskaApp.UserControls
             index = 6;
         }
 
-        private void Task7UserControl_Load(object sender, EventArgs e)
-        {
-            //manager.AssignPic(index);
-            this.Location = manager.taskPosition;
-        }
-
         private void TBAnswer7_Click(object sender, EventArgs e)
         {
             TBAnswer7.Text = string.Empty;

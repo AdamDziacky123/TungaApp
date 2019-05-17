@@ -15,12 +15,6 @@ namespace AbsolventskaApp.UserControls
             InitializeComponent();
         }
 
-        private void Task1UserControl_Load(object sender, EventArgs e)
-        {
-            this.Location = manager.taskPosition;
-            //manager.BringTaskToFront(index);
-        }
-
         private void TBAnswer1_Click(object sender, EventArgs e)
         {
             TBAnswer1.Text = string.Empty;

@@ -129,7 +129,6 @@
             this.Enabled = false;
             this.Name = "Task1UserControl";
             this.Size = new System.Drawing.Size(1300, 900);
-            this.Load += new System.EventHandler(this.Task1UserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

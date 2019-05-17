@@ -194,6 +194,14 @@ namespace AbsolventskaApp
 
         #region OtherFunctions
 
+        public void SetUcPositions()
+        {
+            foreach (UserControl UC in TaskUCList)
+            {
+                UC.Location = taskPosition;
+            }
+        }
+
         public void LastUcBTNRemove()
         {
             TaskUCList[numOfTasks-1].Controls.Find("btnNext", true).FirstOrDefault().Visible = false;
