@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5F84B26-500A-4928-AA92-3B03C18C4472}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AbsolventskaApp</RootNamespace>
+    <AssemblyName>AbsolventskaApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.Client, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Common Files\microsoft shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Common Files\microsoft shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="SpeechLib.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpeechLib.Models.1.6.0\lib\net40\SpeechLib.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="SpeechLib.Synthesis, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpeechLib.Synthesis.1.6.0\lib\net40\SpeechLib.Synthesis.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Manager.cs" />
+    <Compile Include="StartUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StartUserControl.Designer.cs">
+      <DependentUpon>StartUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AssessUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AssessUserControl.Designer.cs">
+      <DependentUpon>AssessUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ResultUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ResultUserControl.Designer.cs">
+      <DependentUpon>ResultUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task10UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task10UserControl.Designer.cs">
+      <DependentUpon>Task10UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task11UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task11UserControl.Designer.cs">
+      <DependentUpon>Task11UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task12UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task12UserControl.Designer.cs">
+      <DependentUpon>Task12UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task13UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task13UserControl.Designer.cs">
+      <DependentUpon>Task13UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task14UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task14UserControl.Designer.cs">
+      <DependentUpon>Task14UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task15UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task15UserControl.Designer.cs">
+      <DependentUpon>Task15UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task16UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task16UserControl.Designer.cs">
+      <DependentUpon>Task16UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task17UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task17UserControl.Designer.cs">
+      <DependentUpon>Task17UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task18UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task18UserControl.Designer.cs">
+      <DependentUpon>Task18UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task19UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task19UserControl.Designer.cs">
+      <DependentUpon>Task19UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task1UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task1UserControl.Designer.cs">
+      <DependentUpon>Task1UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task20UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task20UserControl.Designer.cs">
+      <DependentUpon>Task20UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task2UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task2UserControl.Designer.cs">
+      <DependentUpon>Task2UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task3UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task3UserControl.Designer.cs">
+      <DependentUpon>Task3UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task4UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task4UserControl.Designer.cs">
+      <DependentUpon>Task4UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task5UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task5UserControl.Designer.cs">
+      <DependentUpon>Task5UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task6UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task6UserControl.Designer.cs">
+      <DependentUpon>Task6UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task7UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task7UserControl.Designer.cs">
+      <DependentUpon>Task7UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task8UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task8UserControl.Designer.cs">
+      <DependentUpon>Task8UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Task9UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Task9UserControl.Designer.cs">
+      <DependentUpon>Task9UserControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Manager.resx">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartUserControl.resx">
+      <DependentUpon>StartUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AssessUserControl.resx">
+      <DependentUpon>AssessUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ResultUserControl.resx">
+      <DependentUpon>ResultUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task11UserControl.resx">
+      <DependentUpon>Task11UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task12UserControl.resx">
+      <DependentUpon>Task12UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task13UserControl.resx">
+      <DependentUpon>Task13UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task14UserControl.resx">
+      <DependentUpon>Task14UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task15UserControl.resx">
+      <DependentUpon>Task15UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task16UserControl.resx">
+      <DependentUpon>Task16UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task17UserControl.resx">
+      <DependentUpon>Task17UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task18UserControl.resx">
+      <DependentUpon>Task18UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task19UserControl.resx">
+      <DependentUpon>Task19UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task1UserControl.resx">
+      <DependentUpon>Task1UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task20UserControl.resx">
+      <DependentUpon>Task20UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task2UserControl.resx">
+      <DependentUpon>Task2UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task3UserControl.resx">
+      <DependentUpon>Task3UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task4UserControl.resx">
+      <DependentUpon>Task4UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task5UserControl.resx">
+      <DependentUpon>Task5UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task6UserControl.resx">
+      <DependentUpon>Task6UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task7UserControl.resx">
+      <DependentUpon>Task7UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task8UserControl.resx">
+      <DependentUpon>Task8UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task9UserControl.resx">
+      <DependentUpon>Task9UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Task10UserControl.resx">
+      <DependentUpon>Task10UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
