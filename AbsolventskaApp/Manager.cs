@@ -16,8 +16,8 @@ namespace AbsolventskaApp
         #region Variables
         protected string fileName;
         public int index;
-        protected string path_files = @"C:\Users\Adam\source\repos\AbsolventskaProject\Absolventska\bin\Debug\Tunga Files";
-        protected string path_words = @"C:\Users\Adam\source\repos\AbsolventskaProject\Absolventska\bin\Debug\Tunga Files\Words.txt";
+        protected string path_files = @"C:\Users\Adam\source\repos\GitHub\TungaEditorGitRepo\Absolventska\bin\Debug\Tunga Files";
+        protected string path_words = @"C:\Users\Adam\source\repos\GitHub\TungaEditorGitRepo\Absolventska\bin\Debug\Tunga Files\Words.txt";
         protected SpeechSynthesizer synthesizer = new SpeechSynthesizer();
         protected List<UserControl> TaskUCList = new List<UserControl>();
         private List<TextBox> TBAnswersList = new List<TextBox>();
@@ -157,7 +157,7 @@ namespace AbsolventskaApp
         #endregion
 
         #region UIFunctions
-        public void HideOtherTasks()
+        public void HideOtherTasks() //Removes remaining tasks from lists
         {
             TaskUCList.RemoveRange(numOfTasks, TaskUCList.Count - numOfTasks);
             PBsList.RemoveRange(numOfTasks, PBsList.Count - numOfTasks);
@@ -165,7 +165,7 @@ namespace AbsolventskaApp
             buttonsList.RemoveRange(numOfTasks, buttonsList.Count - numOfTasks);
         }
 
-        public void SetPanels(int indexControl)
+        public void SetPanels(int indexControl) //UI buttons + panels setting
         {
             foreach (Button btn in buttonsList)
             {
@@ -179,9 +179,9 @@ namespace AbsolventskaApp
             panelsList[1].BringToFront();
         }
 
-        public void BringTaskToFront(int index)
+        public void BringTaskToFront(int index) 
         {
-            foreach (Control c in TaskUCList)
+            foreach (Control c in TaskUCList) //Hiding other Tasks
             {
                 c.Visible = false;
             }
@@ -194,7 +194,7 @@ namespace AbsolventskaApp
 
         #region OtherFunctions
 
-        public void SetUcPositions()
+        public void SetUcPositions() //Sets up TaskUserControl location + calls TBAnswerOnClick()
         {
             int tmp = 1;
 
@@ -211,16 +211,16 @@ namespace AbsolventskaApp
             TextBox TB = sender as TextBox;
 
             TB.Text = string.Empty;
-        }
+        } // hides text from Answer textbox
 
-        public void LastUcBTNRemove()
+        public void LastUcBTNRemove()  // change buttons in Assess UC 
         {
             TaskUCList[numOfTasks-1].Controls.Find("btnNext", true).FirstOrDefault().Visible = false;
             /*OtherUCList[0].Controls.Find("btnContinue", true).FirstOrDefault().Visible = false;
             OtherUCList[0].Controls.Find("btnConfirm", true).FirstOrDefault().Visible = true;*/
     }
 
-    public void AssignTaskNum()
+        public void AssignTaskNum() //Finds out how many tasks From the file
         {
             using (System.IO.StreamReader reader = new System.IO.StreamReader(path_words))
             {
@@ -238,7 +238,7 @@ namespace AbsolventskaApp
             else MessageBox.Show("Error during image loading occured.");
         }
 
-        public void CheckAnswer(TextBox answer, int currentIndex) // small UC 
+        public void CheckAnswer(TextBox answer, int currentIndex) 
         {
             if (answer.Text == GetWord(currentIndex))
             {
@@ -269,22 +269,16 @@ namespace AbsolventskaApp
             }
         }
 
-        public void Speak(string input)
+        public void Speak(string input) //Reads the answer !!! finish settings for changing voice
         {
             //synthesizer.Voice.Gender = VoiceGender.Female;
             synthesizer.SelectVoiceByHints(VoiceGender.Female, VoiceAge.Child);
             synthesizer.Volume = 100;
             synthesizer.Rate = -2;
             synthesizer.Speak(input);
-
-            foreach (var v in synthesizer.GetInstalledVoices())
-            {
-                MessageBox.Show(v.VoiceInfo.Gender.ToString());
-                MessageBox.Show(v.VoiceInfo.Age.ToString());
-            }
         }
 
-        public string GetWord(int index)
+        public string GetWord(int index) // Gets file name / right answer from the file
         {
             string output = string.Empty;
 

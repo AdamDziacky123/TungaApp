@@ -169,7 +169,6 @@
             this.BTNTask16.Text = "Task 16";
             this.BTNTask16.UseVisualStyleBackColor = true;
             this.BTNTask16.Visible = false;
-            this.BTNTask16.Click += new System.EventHandler(this.BTNTask16_Click);
             // 
             // BTNTask17
             // 
@@ -185,7 +184,6 @@
             this.BTNTask17.Text = "Task 17";
             this.BTNTask17.UseVisualStyleBackColor = true;
             this.BTNTask17.Visible = false;
-            this.BTNTask17.Click += new System.EventHandler(this.BTNTask17_Click);
             // 
             // BTNTask18
             // 
@@ -201,7 +199,6 @@
             this.BTNTask18.Text = "Task 18";
             this.BTNTask18.UseVisualStyleBackColor = true;
             this.BTNTask18.Visible = false;
-            this.BTNTask18.Click += new System.EventHandler(this.BTNTask18_Click);
             // 
             // BTNTask19
             // 
@@ -217,7 +214,6 @@
             this.BTNTask19.Text = "Task 19";
             this.BTNTask19.UseVisualStyleBackColor = true;
             this.BTNTask19.Visible = false;
-            this.BTNTask19.Click += new System.EventHandler(this.BTNTask19_Click);
             // 
             // BTNTask20
             // 
@@ -234,7 +230,6 @@
             this.BTNTask20.Text = "Task 20";
             this.BTNTask20.UseVisualStyleBackColor = true;
             this.BTNTask20.Visible = false;
-            this.BTNTask20.Click += new System.EventHandler(this.BTNTask20_Click);
             // 
             // BTNTask15
             // 
@@ -250,7 +245,6 @@
             this.BTNTask15.Text = "Task 15";
             this.BTNTask15.UseVisualStyleBackColor = true;
             this.BTNTask15.Visible = false;
-            this.BTNTask15.Click += new System.EventHandler(this.BTNTask15_Click);
             // 
             // BTNTask14
             // 
@@ -266,7 +260,6 @@
             this.BTNTask14.Text = "Task 14";
             this.BTNTask14.UseVisualStyleBackColor = true;
             this.BTNTask14.Visible = false;
-            this.BTNTask14.Click += new System.EventHandler(this.BTNTask14_Click);
             // 
             // BTNTask13
             // 
@@ -282,7 +275,6 @@
             this.BTNTask13.Text = "Task 13";
             this.BTNTask13.UseVisualStyleBackColor = true;
             this.BTNTask13.Visible = false;
-            this.BTNTask13.Click += new System.EventHandler(this.BTNTask13_Click);
             // 
             // BTNTask12
             // 
@@ -298,7 +290,6 @@
             this.BTNTask12.Text = "Task 12";
             this.BTNTask12.UseVisualStyleBackColor = true;
             this.BTNTask12.Visible = false;
-            this.BTNTask12.Click += new System.EventHandler(this.BTNTask12_Click);
             // 
             // BTNTask11
             // 
@@ -315,7 +306,6 @@
             this.BTNTask11.Text = "Task 11";
             this.BTNTask11.UseVisualStyleBackColor = true;
             this.BTNTask11.Visible = false;
-            this.BTNTask11.Click += new System.EventHandler(this.BTNTask11_Click);
             // 
             // BTNTask6
             // 
@@ -331,7 +321,6 @@
             this.BTNTask6.Text = "Task 6";
             this.BTNTask6.UseVisualStyleBackColor = true;
             this.BTNTask6.Visible = false;
-            this.BTNTask6.Click += new System.EventHandler(this.BTNTask6_Click);
             // 
             // BTNTask7
             // 
@@ -347,7 +336,6 @@
             this.BTNTask7.Text = "Task 7";
             this.BTNTask7.UseVisualStyleBackColor = true;
             this.BTNTask7.Visible = false;
-            this.BTNTask7.Click += new System.EventHandler(this.BTNTask7_Click);
             // 
             // BTNTask8
             // 
@@ -363,7 +351,6 @@
             this.BTNTask8.Text = "Task 8";
             this.BTNTask8.UseVisualStyleBackColor = true;
             this.BTNTask8.Visible = false;
-            this.BTNTask8.Click += new System.EventHandler(this.BTNTask8_Click);
             // 
             // BTNTask9
             // 
@@ -379,7 +366,6 @@
             this.BTNTask9.Text = "Task 9";
             this.BTNTask9.UseVisualStyleBackColor = true;
             this.BTNTask9.Visible = false;
-            this.BTNTask9.Click += new System.EventHandler(this.BTNTask9_Click);
             // 
             // BTNTask10
             // 
@@ -396,7 +382,6 @@
             this.BTNTask10.Text = "Task 10";
             this.BTNTask10.UseVisualStyleBackColor = true;
             this.BTNTask10.Visible = false;
-            this.BTNTask10.Click += new System.EventHandler(this.BTNTask10_Click);
             // 
             // BTNTask5
             // 
@@ -412,7 +397,6 @@
             this.BTNTask5.Text = "Task 5";
             this.BTNTask5.UseVisualStyleBackColor = true;
             this.BTNTask5.Visible = false;
-            this.BTNTask5.Click += new System.EventHandler(this.BTNTask5_Click);
             // 
             // BTNTask4
             // 
@@ -428,7 +412,6 @@
             this.BTNTask4.Text = "Task 4";
             this.BTNTask4.UseVisualStyleBackColor = true;
             this.BTNTask4.Visible = false;
-            this.BTNTask4.Click += new System.EventHandler(this.BTNTask4_Click);
             // 
             // BTNTask3
             // 
@@ -444,7 +427,6 @@
             this.BTNTask3.Text = "Task 3";
             this.BTNTask3.UseVisualStyleBackColor = true;
             this.BTNTask3.Visible = false;
-            this.BTNTask3.Click += new System.EventHandler(this.BTNTask3_Click);
             // 
             // BTNTask2
             // 
@@ -460,7 +442,6 @@
             this.BTNTask2.Text = "Task 2";
             this.BTNTask2.UseVisualStyleBackColor = true;
             this.BTNTask2.Visible = false;
-            this.BTNTask2.Click += new System.EventHandler(this.BTNTask2_Click);
             // 
             // BTNTask1
             // 
@@ -477,7 +458,6 @@
             this.BTNTask1.Text = "Task 1";
             this.BTNTask1.UseVisualStyleBackColor = true;
             this.BTNTask1.Visible = false;
-            this.BTNTask1.Click += new System.EventHandler(this.BTNTask1_Click);
             // 
             // panel2
             // 
