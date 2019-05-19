@@ -19,6 +19,8 @@ namespace AbsolventskaApp //last task confirm button + menu + settings
         public Form1()
         {
             InitializeComponent();
+            Icon icon = Icon.ExtractAssociatedIcon(@"D:\Podklady\Absolventská\Logo\Icon.ico");
+            this.Icon = icon;
 
             manager.FillLists(this);
             manager.AssignTaskNum();
