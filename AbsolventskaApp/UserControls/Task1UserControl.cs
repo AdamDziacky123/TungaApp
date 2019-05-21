@@ -10,7 +10,6 @@ namespace AbsolventskaApp.UserControls
 
         public Task1UserControl()
         {
-            //Enabled = false;
             index = 0;
             InitializeComponent();
         }
@@ -22,7 +21,6 @@ namespace AbsolventskaApp.UserControls
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            //manager.AddTasks((Form1)Form1.ActiveForm);
             manager.AssignPic(index + 1);
             manager.BringTaskToFront(index + 1);
             manager.SetPanels(index + 1);
@@ -32,7 +30,6 @@ namespace AbsolventskaApp.UserControls
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             btnNext.Enabled = true;
-            //manager.AddToAnswers((Form1)Form1.ActiveForm);
             manager.CheckAnswer(TBAnswer1, index);
         }
 

@@ -21,10 +21,9 @@ namespace AbsolventskaApp
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            this.Visible = false;            
-            manager.AssignPic(0);
-            manager.BringTaskToFront(0);
-            manager.SetPanels(0);
+            this.Visible = false;
+            manager.OtherUCList[2].BringToFront();
+            manager.OtherUCList[2].Visible = true;
         }
 
         private void StartUserControl_Load(object sender, EventArgs e)

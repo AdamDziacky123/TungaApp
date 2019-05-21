@@ -57,6 +57,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.startUserControl1 = new AbsolventskaApp.StartUserControl();
             this.task9UserControl1 = new AbsolventskaApp.UserControls.Task9UserControl();
             this.task8UserControl1 = new AbsolventskaApp.UserControls.Task8UserControl();
             this.task7UserControl1 = new AbsolventskaApp.UserControls.Task7UserControl();
@@ -79,7 +80,7 @@
             this.task10UserControl1 = new AbsolventskaApp.UserControls.Task10UserControl();
             this.resultUserControl1 = new AbsolventskaApp.UserControls.ResultUserControl();
             this.assessUserControl1 = new AbsolventskaApp.UserControls.AssessUserControl();
-            this.startUserControl1 = new AbsolventskaApp.StartUserControl();
+            this.menuUserControl1 = new AbsolventskaApp.UserControls.MenuUserControl();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo)).BeginInit();
             this.panel1.SuspendLayout();
@@ -500,6 +501,15 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // startUserControl1
+            // 
+            this.startUserControl1.BackColor = System.Drawing.Color.Silver;
+            this.startUserControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.startUserControl1.Location = new System.Drawing.Point(470, 70);
+            this.startUserControl1.Name = "startUserControl1";
+            this.startUserControl1.Size = new System.Drawing.Size(1200, 900);
+            this.startUserControl1.TabIndex = 53;
+            // 
             // task9UserControl1
             // 
             this.task9UserControl1.BackColor = System.Drawing.Color.Silver;
@@ -701,14 +711,13 @@
             this.assessUserControl1.Size = new System.Drawing.Size(1300, 900);
             this.assessUserControl1.TabIndex = 52;
             // 
-            // startUserControl1
+            // menuUserControl1
             // 
-            this.startUserControl1.BackColor = System.Drawing.Color.Silver;
-            this.startUserControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.startUserControl1.Location = new System.Drawing.Point(390, 80);
-            this.startUserControl1.Name = "startUserControl1";
-            this.startUserControl1.Size = new System.Drawing.Size(1200, 900);
-            this.startUserControl1.TabIndex = 53;
+            this.menuUserControl1.BackColor = System.Drawing.Color.Silver;
+            this.menuUserControl1.Location = new System.Drawing.Point(390, 80);
+            this.menuUserControl1.Name = "menuUserControl1";
+            this.menuUserControl1.Size = new System.Drawing.Size(1300, 900);
+            this.menuUserControl1.TabIndex = 54;
             // 
             // Form1
             // 
@@ -743,6 +752,7 @@
             this.Controls.Add(this.task10UserControl1);
             this.Controls.Add(this.resultUserControl1);
             this.Controls.Add(this.assessUserControl1);
+            this.Controls.Add(this.menuUserControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -810,6 +820,7 @@
         private UserControls.ResultUserControl resultUserControl1;
         private UserControls.AssessUserControl assessUserControl1;
         private StartUserControl startUserControl1;
+        private UserControls.MenuUserControl menuUserControl1;
     }
 }
 

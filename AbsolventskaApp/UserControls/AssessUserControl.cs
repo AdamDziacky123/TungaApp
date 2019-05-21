@@ -19,11 +19,6 @@ namespace AbsolventskaApp.UserControls
             InitializeComponent();
         }
 
-        private void AssessUserControl_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void BTNContinue_Click(object sender, EventArgs e)
         {
             this.Visible = false;

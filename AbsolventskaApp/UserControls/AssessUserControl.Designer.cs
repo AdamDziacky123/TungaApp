@@ -98,7 +98,6 @@
             this.Controls.Add(this.btnConfirm);
             this.Name = "AssessUserControl";
             this.Size = new System.Drawing.Size(1300, 900);
-            this.Load += new System.EventHandler(this.AssessUserControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -23,9 +23,6 @@ namespace AbsolventskaApp //last task confirm button + menu + settings
             this.Icon = icon;
 
             manager.FillLists(this);
-            manager.AssignTaskNum();
-            manager.HideOtherTasks();
-            manager.LastUcBTNRemove();
             manager.SetUcPositions();
         }
 

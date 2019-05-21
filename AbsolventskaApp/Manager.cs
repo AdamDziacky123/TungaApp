@@ -38,6 +38,30 @@ namespace AbsolventskaApp
         //private List<System.IO.Stream> imagesStreamsList = new List<System.IO.Stream>();
         #endregion
 
+        #region PathMethods
+
+        public void SetPath_files(string newPathFiles)
+        {
+            path_files = newPathFiles;
+        }
+
+        public void SetPath_words(string newPathWords)
+        {
+            path_words = newPathWords;
+        }
+
+        public string GetPath_files()
+        {
+            return path_files;
+        }
+
+        public string GetPath_words()
+        {
+            return path_words;
+        }
+
+        #endregion
+
         #region GetMethods
         public static Manager GetInstance()
         {
@@ -95,7 +119,7 @@ namespace AbsolventskaApp
             }
         }
 
-        private void AddTasks(Form1 form)
+        private void AddTasks(Form1 form) //Adding and ordering all task user controls
         {
             List<UserControl> random = new List<UserControl>();
 
@@ -107,11 +131,10 @@ namespace AbsolventskaApp
                 {
                     random.Add((UserControl)c);
                     c.Location = taskPosition;
-                    //MessageBox.Show(c.Name + c.Location);
                 }
             }
 
-            for (int i = 0; i <= random.Count; i++)
+            for (int i = 0; i <= random.Count; i++) //ordering by index / number
             {
                 if (renull) { i = 0; renull = false; }
                 if (q <= random.Count)
@@ -127,7 +150,7 @@ namespace AbsolventskaApp
             }
         }
 
-        private void AddOtherUCs(Form1 form)
+        private void AddOtherUCs(Form1 form) // Adding other User Controls ( menu, settings.. )
         {
             if (form.Controls.Find("assessUserControl1", true).FirstOrDefault() != null)
             {
@@ -145,7 +168,7 @@ namespace AbsolventskaApp
             }
         }
 
-        public void FillLists(Form1 form)
+        public void FillLists(Form1 form) //Calls all to List functions
         {
             AddToAnswers(form);
             AddToPBs(form);
@@ -159,10 +182,20 @@ namespace AbsolventskaApp
         #region UIFunctions
         public void HideOtherTasks() //Removes remaining tasks from lists
         {
+            foreach (Button btn in buttonsList)
+            {
+                btn.Visible = false;
+            }
+
             TaskUCList.RemoveRange(numOfTasks, TaskUCList.Count - numOfTasks);
             PBsList.RemoveRange(numOfTasks, PBsList.Count - numOfTasks);
             TBAnswersList.RemoveRange(numOfTasks, TBAnswersList.Count - numOfTasks);
             buttonsList.RemoveRange(numOfTasks, buttonsList.Count - numOfTasks);
+
+            foreach (Button btn in buttonsList)
+            {
+                btn.Visible = true;
+            }
         }
 
         public void SetPanels(int indexControl) //UI buttons + panels setting
@@ -204,14 +237,18 @@ namespace AbsolventskaApp
                 UC.Controls.Find(string.Format("TBAnswer{0}", tmp), true).FirstOrDefault().Click += new EventHandler(TBAnswerOnClick);
                 tmp++;
             }
+
+            foreach (UserControl UC in OtherUCList)
+            {
+                UC.Location = taskPosition;
+            }
         }
 
-        private void TBAnswerOnClick(object sender, EventArgs e)
+        private void TBAnswerOnClick(object sender, EventArgs e) // hides text from Answer textbox
         {
             TextBox TB = sender as TextBox;
-
             TB.Text = string.Empty;
-        } // hides text from Answer textbox
+        } 
 
         public void LastUcBTNRemove()  // change buttons in Assess UC 
         {
