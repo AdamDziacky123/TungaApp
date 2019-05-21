@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.LBLResult = new System.Windows.Forms.Label();
-            this.LBLResultPercent = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.lblResultPercent = new System.Windows.Forms.Label();
+            this.btnFinish = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -40,51 +40,53 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F);
-            this.label1.Location = new System.Drawing.Point(369, 334);
+            this.label1.Location = new System.Drawing.Point(318, 334);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(277, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "Your result is :";
             // 
-            // LBLResult
+            // lblResult
             // 
-            this.LBLResult.AutoSize = true;
-            this.LBLResult.Font = new System.Drawing.Font("Century Gothic", 24F);
-            this.LBLResult.Location = new System.Drawing.Point(652, 334);
-            this.LBLResult.Name = "LBLResult";
-            this.LBLResult.Size = new System.Drawing.Size(135, 49);
-            this.LBLResult.TabIndex = 1;
-            this.LBLResult.Text = "Result";
+            this.lblResult.AutoSize = true;
+            this.lblResult.Font = new System.Drawing.Font("Century Gothic", 24F);
+            this.lblResult.Location = new System.Drawing.Point(601, 334);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(135, 49);
+            this.lblResult.TabIndex = 1;
+            this.lblResult.Text = "Result";
             // 
-            // LBLResultPercent
+            // lblResultPercent
             // 
-            this.LBLResultPercent.AutoSize = true;
-            this.LBLResultPercent.Font = new System.Drawing.Font("Century Gothic", 24F);
-            this.LBLResultPercent.Location = new System.Drawing.Point(871, 334);
-            this.LBLResultPercent.Name = "LBLResultPercent";
-            this.LBLResultPercent.Size = new System.Drawing.Size(53, 49);
-            this.LBLResultPercent.TabIndex = 2;
-            this.LBLResultPercent.Text = "%";
+            this.lblResultPercent.AutoSize = true;
+            this.lblResultPercent.Font = new System.Drawing.Font("Century Gothic", 24F);
+            this.lblResultPercent.Location = new System.Drawing.Point(820, 334);
+            this.lblResultPercent.Name = "lblResultPercent";
+            this.lblResultPercent.Size = new System.Drawing.Size(141, 49);
+            this.lblResultPercent.TabIndex = 2;
+            this.lblResultPercent.Text = "0.,00%";
             // 
-            // button1
+            // btnFinish
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.button1.Location = new System.Drawing.Point(484, 459);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(303, 72);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Finish Exercise";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnFinish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
+            this.btnFinish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinish.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.btnFinish.Location = new System.Drawing.Point(484, 459);
+            this.btnFinish.Name = "btnFinish";
+            this.btnFinish.Size = new System.Drawing.Size(303, 72);
+            this.btnFinish.TabIndex = 3;
+            this.btnFinish.Text = "Finish Exercise";
+            this.btnFinish.UseVisualStyleBackColor = false;
+            this.btnFinish.Click += new System.EventHandler(this.button1_Click);
             // 
             // ResultUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.LBLResultPercent);
-            this.Controls.Add(this.LBLResult);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.btnFinish);
+            this.Controls.Add(this.lblResultPercent);
+            this.Controls.Add(this.lblResult);
             this.Controls.Add(this.label1);
             this.Name = "ResultUserControl";
             this.Size = new System.Drawing.Size(1300, 900);
@@ -96,8 +98,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label LBLResult;
-        private System.Windows.Forms.Label LBLResultPercent;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Label lblResultPercent;
+        private System.Windows.Forms.Button btnFinish;
     }
 }

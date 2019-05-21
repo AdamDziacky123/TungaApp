@@ -40,8 +40,8 @@ namespace AbsolventskaApp.UserControls
 
         private void btnOwn_Click(object sender, EventArgs e)
         {
-            manager.SetPath_files(@"C:\Users\Adam\source\repos\GitHub\TungaEditorGitRepo\Absolventska\bin\Debug\Tunga Files\Numbers");
-            manager.SetPath_words(@"C:\Users\Adam\source\repos\GitHub\TungaEditorGitRepo\Absolventska\bin\Debug\Tunga Files\Numbers\Words.txt");
+            manager.SetPath_files(@"C:\Users\Adam\source\repos\GitHub\TungaEditorGitRepo\Absolventska\bin\Debug\Tunga Files");
+            manager.SetPath_words(@"C:\Users\Adam\source\repos\GitHub\TungaEditorGitRepo\Absolventska\bin\Debug\Tunga Files\Words.txt");
             Start();
         }
 

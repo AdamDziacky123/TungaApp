@@ -29,6 +29,8 @@ namespace AbsolventskaApp.UserControls
         {
             this.Visible = false;
             manager.OtherUCList[1].BringToFront();
+            manager.OtherUCList[1].Visible = true;
+            manager.ShowResult();
         }
     }
 }

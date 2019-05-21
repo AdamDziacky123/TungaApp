@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Drawing;
 using System.Security;
+using System.Globalization;
 
 namespace AbsolventskaApp
 {
@@ -27,8 +28,8 @@ namespace AbsolventskaApp
         public List<UserControl> OtherUCList = new List<UserControl>();
         private bool renull;
         public Point taskPosition = new Point(390, 80);
-        private int numOfTasks;
-        private int numOfCorrect = 0;
+        public int numOfTasks;
+        public int numOfCorrect = 0;
         static Manager instance = new Manager();
 
         // From Sharepoint
@@ -180,6 +181,7 @@ namespace AbsolventskaApp
         #endregion
 
         #region UIFunctions
+
         public void HideOtherTasks() //Removes remaining tasks from lists
         {
             foreach (Button btn in buttonsList)
@@ -214,18 +216,20 @@ namespace AbsolventskaApp
 
         public void BringTaskToFront(int index) 
         {
-            foreach (Control c in TaskUCList) //Hiding other Tasks
+            foreach (UserControl c in TaskUCList) //Hiding other Tasks
             {
                 c.Visible = false;
+            }
+
+            foreach (UserControl UC in OtherUCList)
+            {
+                UC.Visible = false;
             }
 
             TaskUCList[index].Visible = true;
             TaskUCList[index].Enabled = true;
             TaskUCList[index].BringToFront();
         }
-        #endregion
-
-        #region OtherFunctions
 
         public void SetUcPositions() //Sets up TaskUserControl location + calls TBAnswerOnClick()
         {
@@ -248,24 +252,9 @@ namespace AbsolventskaApp
         {
             TextBox TB = sender as TextBox;
             TB.Text = string.Empty;
-        } 
-
-        public void LastUcBTNRemove()  // change buttons in Assess UC 
-        {
-            TaskUCList[numOfTasks-1].Controls.Find("btnNext", true).FirstOrDefault().Visible = false;
-            /*OtherUCList[0].Controls.Find("btnContinue", true).FirstOrDefault().Visible = false;
-            OtherUCList[0].Controls.Find("btnConfirm", true).FirstOrDefault().Visible = true;*/
-    }
-
-        public void AssignTaskNum() //Finds out how many tasks From the file
-        {
-            using (System.IO.StreamReader reader = new System.IO.StreamReader(path_words))
-            {
-                numOfTasks = int.Parse(reader.ReadLine());
-            }
         }
 
-        public void AssignPic(int index) 
+        public void AssignPic(int index) //Adds picture to Task.PictureBox
         {
             if (GetWord(index) != null && GetWord(index).Length > 0)
             {
@@ -275,35 +264,82 @@ namespace AbsolventskaApp
             else MessageBox.Show("Error during image loading occured.");
         }
 
+        public void LastUcBTNRemove()  // change buttons in Assess UC 
+        {
+            TaskUCList[numOfTasks - 1].Controls.Find("btnNext", true).FirstOrDefault().Visible = false;
+        }
+        #endregion
+
+        #region OtherFunctions
+
+        public void AssignTaskNum() //Finds out how many tasks From the file
+        {
+            using (System.IO.StreamReader reader = new System.IO.StreamReader(path_words))
+            {
+                numOfTasks = int.Parse(reader.ReadLine());
+            }
+        }
+
         public void CheckAnswer(TextBox answer, int currentIndex) 
         {
-            if (answer.Text == GetWord(currentIndex))
+            if (answer.Text == GetWord(currentIndex) || answer.Text == GetWord(currentIndex).ToLower()) //comparing text with reader.Readline from Words.txt
             {
                 numOfCorrect++;
 
-                OtherUCList[0].Location = new Point(350,150);
-                OtherUCList[0].Controls.Find("LblAnswerGood", true).FirstOrDefault().Visible = true;
-                OtherUCList[0].Controls.Find("LblAnswerWrong", true).FirstOrDefault().Visible = false;
+                if (currentIndex + 1 < numOfTasks)
+                {
+                    OtherUCList[0].Controls.Find("LblAnswerGood", true).FirstOrDefault().Visible = true;
+                    OtherUCList[0].Controls.Find("LblAnswerWrong", true).FirstOrDefault().Visible = false;
+                }
+
+                else
+                {
+                    OtherUCList[0].Controls.Find("LblAnswerGood", true).FirstOrDefault().Visible = true;
+                    OtherUCList[0].Controls.Find("LblAnswerWrong", true).FirstOrDefault().Visible = false;
+                    OtherUCList[0].Controls.Find("btnConfirm", true).FirstOrDefault().Visible = true;
+                    OtherUCList[0].Controls.Find("btnContinue", true).FirstOrDefault().Visible = false;
+                }
+
+                OtherUCList[0].Location = new Point(350, 150);
                 OtherUCList[0].BringToFront();
                 OtherUCList[0].Visible = true;
 
-                //BringTaskToFront(currentIndex);
                 TaskUCList[currentIndex].Visible = false;
                 TaskUCList[currentIndex].Controls.Find("btnConfirm", true).FirstOrDefault().Enabled = false;
             }
 
             else
             {
+                if (currentIndex + 1 < numOfTasks)
+                {
+                    OtherUCList[0].Controls.Find("LblAnswerGood", true).FirstOrDefault().Visible = false;
+                    OtherUCList[0].Controls.Find("LblAnswerWrong", true).FirstOrDefault().Visible = true;
+                }
+
+                else
+                {
+                    OtherUCList[0].Controls.Find("LblAnswerGood", true).FirstOrDefault().Visible = false;
+                    OtherUCList[0].Controls.Find("LblAnswerWrong", true).FirstOrDefault().Visible = true;
+
+                    OtherUCList[0].Controls.Find("btnConfirm", true).FirstOrDefault().Visible = true;
+                    OtherUCList[0].Controls.Find("btnContinue", true).FirstOrDefault().Visible = false;
+                }
+
                 OtherUCList[0].Location = new Point(350, 150);
-                OtherUCList[0].Controls.Find("LblAnswerGood", true).FirstOrDefault().Visible = false;
-                OtherUCList[0].Controls.Find("LblAnswerWrong", true).FirstOrDefault().Visible = true;
                 OtherUCList[0].BringToFront();
                 OtherUCList[0].Visible = true;
 
-                //BringTaskToFront(currentIndex);
                 TaskUCList[currentIndex].Visible = false;
                 TaskUCList[currentIndex].Controls.Find("btnConfirm", true).FirstOrDefault().Enabled = false;
             }
+        }
+
+        public void ShowResult()
+        {
+            double resultPerc = ((double)numOfCorrect / (double)numOfTasks);
+            OtherUCList[1].Controls.Find("lblResult",true).FirstOrDefault().Text = string.Format("{0}/{1}", numOfCorrect, numOfTasks);
+            OtherUCList[1].Controls.Find("lblResultPercent", true).FirstOrDefault().Text = resultPerc.ToString("P", CultureInfo.InvariantCulture);
+            OtherUCList[1].Location = new Point(350, 110);
         }
 
         public void Speak(string input) //Reads the answer !!! finish settings for changing voice
