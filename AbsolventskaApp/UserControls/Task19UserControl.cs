@@ -23,8 +23,8 @@ namespace AbsolventskaApp.UserControls
         {
             //manager.AddTasks((Form1)Form1.ActiveForm);
             manager.AssignPic(index + 1);
-            manager.BringTaskToFront(index + 1);
-            manager.SetPanels(index + 1);
+            manager.BringControlToFront(index + 1, true);
+            manager.SetPanels(index + 1, true);
             manager.index++;
         }
 

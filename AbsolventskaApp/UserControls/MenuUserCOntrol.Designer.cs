@@ -40,7 +40,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Silver;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 45F);
-            this.label1.Location = new System.Drawing.Point(486, 54);
+            this.label1.Location = new System.Drawing.Point(486, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(248, 90);
             this.label1.TabIndex = 23;
@@ -52,9 +52,9 @@
             this.btnNumbers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNumbers.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.btnNumbers.ForeColor = System.Drawing.Color.Black;
-            this.btnNumbers.Location = new System.Drawing.Point(510, 325);
+            this.btnNumbers.Location = new System.Drawing.Point(454, 321);
             this.btnNumbers.Name = "btnNumbers";
-            this.btnNumbers.Size = new System.Drawing.Size(200, 50);
+            this.btnNumbers.Size = new System.Drawing.Size(313, 57);
             this.btnNumbers.TabIndex = 31;
             this.btnNumbers.Text = "Numbers";
             this.btnNumbers.UseVisualStyleBackColor = false;
@@ -66,9 +66,9 @@
             this.btnAnimals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnimals.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.btnAnimals.ForeColor = System.Drawing.Color.Black;
-            this.btnAnimals.Location = new System.Drawing.Point(510, 411);
+            this.btnAnimals.Location = new System.Drawing.Point(454, 409);
             this.btnAnimals.Name = "btnAnimals";
-            this.btnAnimals.Size = new System.Drawing.Size(200, 50);
+            this.btnAnimals.Size = new System.Drawing.Size(313, 57);
             this.btnAnimals.TabIndex = 32;
             this.btnAnimals.Text = "Animals";
             this.btnAnimals.UseVisualStyleBackColor = false;
@@ -80,9 +80,9 @@
             this.btnWut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWut.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.btnWut.ForeColor = System.Drawing.Color.Black;
-            this.btnWut.Location = new System.Drawing.Point(510, 497);
+            this.btnWut.Location = new System.Drawing.Point(454, 495);
             this.btnWut.Name = "btnWut";
-            this.btnWut.Size = new System.Drawing.Size(200, 50);
+            this.btnWut.Size = new System.Drawing.Size(313, 57);
             this.btnWut.TabIndex = 33;
             this.btnWut.Text = "???";
             this.btnWut.UseVisualStyleBackColor = false;
@@ -94,9 +94,9 @@
             this.btnOwn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOwn.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.btnOwn.ForeColor = System.Drawing.Color.Black;
-            this.btnOwn.Location = new System.Drawing.Point(510, 584);
+            this.btnOwn.Location = new System.Drawing.Point(454, 582);
             this.btnOwn.Name = "btnOwn";
-            this.btnOwn.Size = new System.Drawing.Size(200, 50);
+            this.btnOwn.Size = new System.Drawing.Size(313, 57);
             this.btnOwn.TabIndex = 34;
             this.btnOwn.Text = "Own";
             this.btnOwn.UseVisualStyleBackColor = false;

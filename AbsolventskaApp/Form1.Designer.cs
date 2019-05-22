@@ -33,7 +33,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.PBLogo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.sidepanel = new System.Windows.Forms.Panel();
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.btnMenu = new System.Windows.Forms.Button();
+            this.pnlSideLarge = new System.Windows.Forms.Panel();
+            this.btnWelcome = new System.Windows.Forms.Button();
+            this.pnlSideSmall = new System.Windows.Forms.Panel();
             this.BTNTask16 = new System.Windows.Forms.Button();
             this.BTNTask17 = new System.Windows.Forms.Button();
             this.BTNTask18 = new System.Windows.Forms.Button();
@@ -81,6 +85,7 @@
             this.resultUserControl1 = new AbsolventskaApp.UserControls.ResultUserControl();
             this.assessUserControl1 = new AbsolventskaApp.UserControls.AssessUserControl();
             this.menuUserControl1 = new AbsolventskaApp.UserControls.MenuUserControl();
+            this.settingsUserControl1 = new AbsolventskaApp.UserControls.SettingsUserControl();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo)).BeginInit();
             this.panel1.SuspendLayout();
@@ -121,7 +126,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.sidepanel);
+            this.panel1.Controls.Add(this.btnSettings);
+            this.panel1.Controls.Add(this.btnMenu);
+            this.panel1.Controls.Add(this.pnlSideLarge);
+            this.panel1.Controls.Add(this.btnWelcome);
+            this.panel1.Controls.Add(this.pnlSideSmall);
             this.panel1.Controls.Add(this.BTNTask16);
             this.panel1.Controls.Add(this.BTNTask17);
             this.panel1.Controls.Add(this.BTNTask18);
@@ -148,13 +157,63 @@
             this.panel1.Size = new System.Drawing.Size(183, 1051);
             this.panel1.TabIndex = 27;
             // 
-            // sidepanel
+            // btnSettings
             // 
-            this.sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
-            this.sidepanel.Location = new System.Drawing.Point(0, 38);
-            this.sidepanel.Name = "sidepanel";
-            this.sidepanel.Size = new System.Drawing.Size(11, 30);
-            this.sidepanel.TabIndex = 41;
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
+            this.btnSettings.Location = new System.Drawing.Point(0, 190);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(183, 63);
+            this.btnSettings.TabIndex = 44;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.FlatAppearance.BorderSize = 0;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
+            this.btnMenu.Location = new System.Drawing.Point(0, 130);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(183, 63);
+            this.btnMenu.TabIndex = 43;
+            this.btnMenu.Text = "Menu";
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // pnlSideLarge
+            // 
+            this.pnlSideLarge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
+            this.pnlSideLarge.Location = new System.Drawing.Point(0, 70);
+            this.pnlSideLarge.Name = "pnlSideLarge";
+            this.pnlSideLarge.Size = new System.Drawing.Size(11, 63);
+            this.pnlSideLarge.TabIndex = 42;
+            // 
+            // btnWelcome
+            // 
+            this.btnWelcome.FlatAppearance.BorderSize = 0;
+            this.btnWelcome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWelcome.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
+            this.btnWelcome.Location = new System.Drawing.Point(0, 70);
+            this.btnWelcome.Name = "btnWelcome";
+            this.btnWelcome.Size = new System.Drawing.Size(183, 63);
+            this.btnWelcome.TabIndex = 42;
+            this.btnWelcome.Text = "Welcome";
+            this.btnWelcome.UseVisualStyleBackColor = true;
+            this.btnWelcome.Click += new System.EventHandler(this.btnWelcome_Click);
+            // 
+            // pnlSideSmall
+            // 
+            this.pnlSideSmall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
+            this.pnlSideSmall.Location = new System.Drawing.Point(0, 38);
+            this.pnlSideSmall.Name = "pnlSideSmall";
+            this.pnlSideSmall.Size = new System.Drawing.Size(11, 30);
+            this.pnlSideSmall.TabIndex = 41;
             // 
             // BTNTask16
             // 
@@ -698,6 +757,7 @@
             // 
             // resultUserControl1
             // 
+            this.resultUserControl1.BackColor = System.Drawing.Color.Silver;
             this.resultUserControl1.Location = new System.Drawing.Point(204, 51);
             this.resultUserControl1.Name = "resultUserControl1";
             this.resultUserControl1.Size = new System.Drawing.Size(1300, 900);
@@ -719,6 +779,14 @@
             this.menuUserControl1.Size = new System.Drawing.Size(1300, 900);
             this.menuUserControl1.TabIndex = 54;
             // 
+            // settingsUserControl1
+            // 
+            this.settingsUserControl1.BackColor = System.Drawing.Color.Silver;
+            this.settingsUserControl1.Location = new System.Drawing.Point(346, 89);
+            this.settingsUserControl1.Name = "settingsUserControl1";
+            this.settingsUserControl1.Size = new System.Drawing.Size(1300, 900);
+            this.settingsUserControl1.TabIndex = 55;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -726,6 +794,7 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1920, 1051);
+            this.Controls.Add(this.settingsUserControl1);
             this.Controls.Add(this.pnlLogo);
             this.Controls.Add(this.startUserControl1);
             this.Controls.Add(this.panel2);
@@ -794,7 +863,7 @@
         private System.Windows.Forms.Button BTNTask10;
         private System.Windows.Forms.Button BTNTask5;
         private System.Windows.Forms.Button BTNTask4;
-        private System.Windows.Forms.Panel sidepanel;
+        private System.Windows.Forms.Panel pnlSideSmall;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnExit;
         private UserControls.Task1UserControl task1UserControl1;
@@ -821,6 +890,11 @@
         private UserControls.AssessUserControl assessUserControl1;
         private StartUserControl startUserControl1;
         private UserControls.MenuUserControl menuUserControl1;
+        private System.Windows.Forms.Button btnWelcome;
+        private System.Windows.Forms.Panel pnlSideLarge;
+        private System.Windows.Forms.Button btnMenu;
+        private System.Windows.Forms.Button btnSettings;
+        private UserControls.SettingsUserControl settingsUserControl1;
     }
 }
 

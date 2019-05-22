@@ -24,12 +24,16 @@ namespace AbsolventskaApp
         private List<TextBox> TBAnswersList = new List<TextBox>();
         private List<PictureBox> PBsList = new List<PictureBox>();
         private List<Panel> panelsList = new List<Panel>();
-        private List<Button> buttonsList = new List<Button>(); //on the left
+        private List<Button> taskButtonsList = new List<Button>(); //on the left
+        private List<Button> menuButtonsList = new List<Button>();
         public List<UserControl> OtherUCList = new List<UserControl>();
         private bool renull;
         public Point taskPosition = new Point(390, 80);
         public int numOfTasks;
         public int numOfCorrect = 0;
+        public int speakerVolume = 50;
+        public int speakerRate = -2;
+        public VoiceGender speakerGender = VoiceGender.Female;
         static Manager instance = new Manager();
 
         // From Sharepoint
@@ -76,11 +80,26 @@ namespace AbsolventskaApp
 
         public List<Button> GetButtonsList()
         {
-            return buttonsList;
+            return taskButtonsList;
         }
         #endregion
 
-        #region AddToList Functions
+        #region List Functions
+
+        private void NewGame()
+        {
+            TaskUCList.Clear();
+            TBAnswersList.Clear();
+            PBsList.Clear();
+            panelsList.Clear();
+            taskButtonsList.Clear();
+            menuButtonsList.Clear();
+            OtherUCList.Clear();
+
+            numOfCorrect = 0;
+            index = 0;
+        }
+
         private void AddToAnswers(Form1 form)
         {
             for (int i = 0; i < form.Controls.Count; i++)
@@ -105,8 +124,9 @@ namespace AbsolventskaApp
 
         private void AddPanelsToList(Form1 form)
         {
-            panelsList.Add(form.Controls.Find("sidePanel", true).FirstOrDefault() as Panel);
+            panelsList.Add(form.Controls.Find("pnlSideSmall", true).FirstOrDefault() as Panel);
             panelsList.Add(form.Controls.Find("pnlLogo", true).FirstOrDefault() as Panel);
+            panelsList.Add(form.Controls.Find("pnlSideLarge", true).FirstOrDefault() as Panel);
         }
 
         private void AddButtonsToList(Form1 form)
@@ -115,9 +135,19 @@ namespace AbsolventskaApp
             {
                 if (form.Controls.Find(string.Format("BTNTask{0}",i), true).FirstOrDefault() != null)
                 {
-                    buttonsList.Add(form.Controls.Find(string.Format("BTNTask{0}", i), true).FirstOrDefault() as Button);
+                    taskButtonsList.Add(form.Controls.Find(string.Format("BTNTask{0}", i), true).FirstOrDefault() as Button);
                 }
             }
+
+            foreach (Button btn in taskButtonsList) //hiding task buttons, for menu, settings..
+            {
+                btn.Enabled = false;
+                btn.Visible = false;
+            }
+
+            menuButtonsList.Add(form.Controls.Find("btnWelcome", true).FirstOrDefault() as Button);
+            menuButtonsList.Add(form.Controls.Find("btnMenu", true).FirstOrDefault() as Button);
+            menuButtonsList.Add(form.Controls.Find("btnSettings", true).FirstOrDefault() as Button);
         }
 
         private void AddTasks(Form1 form) //Adding and ordering all task user controls
@@ -153,6 +183,21 @@ namespace AbsolventskaApp
 
         private void AddOtherUCs(Form1 form) // Adding other User Controls ( menu, settings.. )
         {
+            if (form.Controls.Find("startUserControl1", true).FirstOrDefault() != null)
+            {
+                OtherUCList.Add(form.Controls.Find("startUserControl1", true).FirstOrDefault() as UserControl);
+            }
+
+            if (form.Controls.Find("menuUserControl1", true).FirstOrDefault() != null)
+            {
+                OtherUCList.Add(form.Controls.Find("menuUserControl1", true).FirstOrDefault() as UserControl);
+            }
+
+            if (form.Controls.Find("settingsUserControl1", true).FirstOrDefault() != null)
+            {
+                OtherUCList.Add(form.Controls.Find("settingsUserControl1", true).FirstOrDefault() as UserControl);
+            }
+
             if (form.Controls.Find("assessUserControl1", true).FirstOrDefault() != null)
             {
                 OtherUCList.Add(form.Controls.Find("assessUserControl1", true).FirstOrDefault() as UserControl);
@@ -163,14 +208,12 @@ namespace AbsolventskaApp
                 OtherUCList.Add(form.Controls.Find("resultUserControl1", true).FirstOrDefault() as UserControl);
             }
 
-            if (form.Controls.Find("menuUserControl1", true).FirstOrDefault() != null)
-            {
-                OtherUCList.Add(form.Controls.Find("menuUserControl1", true).FirstOrDefault() as UserControl);
-            }
         }
 
         public void FillLists(Form1 form) //Calls all to List functions
         {
+            NewGame();
+
             AddToAnswers(form);
             AddToPBs(form);
             AddTasks(form);
@@ -178,57 +221,74 @@ namespace AbsolventskaApp
             AddButtonsToList(form);
             AddPanelsToList(form);
         }
+
         #endregion
 
         #region UIFunctions
 
-        public void HideOtherTasks() //Removes remaining tasks from lists
+        private void HideOtherTasks() //Removes remaining tasks from lists
         {
-            foreach (Button btn in buttonsList)
+            foreach (Button btn in taskButtonsList)
             {
                 btn.Visible = false;
             }
 
-            TaskUCList.RemoveRange(numOfTasks, TaskUCList.Count - numOfTasks);
+            TaskUCList.RemoveRange(numOfTasks, TaskUCList.Count - numOfTasks); //removing remaining UserControls, buttons, answers... 
             PBsList.RemoveRange(numOfTasks, PBsList.Count - numOfTasks);
             TBAnswersList.RemoveRange(numOfTasks, TBAnswersList.Count - numOfTasks);
-            buttonsList.RemoveRange(numOfTasks, buttonsList.Count - numOfTasks);
+            taskButtonsList.RemoveRange(numOfTasks, taskButtonsList.Count - numOfTasks);
 
-            foreach (Button btn in buttonsList)
+            /*foreach (Button btn in taskButtonsList)
             {
                 btn.Visible = true;
+            }*/
+        }
+
+        public void SetPanels(int index, bool isTask) //panels moving ( that small thing by the buttons )
+        {
+            if (isTask)
+            {
+                taskButtonsList[index].Enabled = true;
+                panelsList[0].Top = taskButtonsList[index].Top;
+                panelsList[0].BringToFront();
+            }
+
+            else // is menu. 1, welcome   2, menu    3, settings
+            {
+                panelsList[2].Top = menuButtonsList[index].Top;
+                panelsList[2].BringToFront();
             }
         }
 
-        public void SetPanels(int indexControl) //UI buttons + panels setting
+        public void BringControlToFront(int index, bool isTask) 
         {
-            foreach (Button btn in buttonsList)
+            if (isTask)
             {
-                btn.Enabled = false;
+                foreach (UserControl c in TaskUCList) //Hiding other Tasks
+                {
+                    c.Visible = false;
+                }
+
+                foreach (UserControl UC in OtherUCList)
+                {
+                    UC.Visible = false;
+                }
+
+                TaskUCList[index].Visible = true;
+                TaskUCList[index].Enabled = true;
+                TaskUCList[index].BringToFront();
             }
 
-            buttonsList[indexControl].Enabled = true;
-            panelsList[0].Height = buttonsList[indexControl].Height;
-            panelsList[0].Top = buttonsList[indexControl].Top;
-            panelsList[0].BringToFront();
-            panelsList[1].BringToFront();
-        }
-
-        public void BringTaskToFront(int index) 
-        {
-            foreach (UserControl c in TaskUCList) //Hiding other Tasks
+            else
             {
-                c.Visible = false;
-            }
+                foreach (UserControl UC in OtherUCList)
+                {
+                    UC.Visible = false;
+                }
 
-            foreach (UserControl UC in OtherUCList)
-            {
-                UC.Visible = false;
+                OtherUCList[index].Visible = true;
+                OtherUCList[index].BringToFront();
             }
-
-            TaskUCList[index].Visible = true;
-            TaskUCList[index].Enabled = true;
-            TaskUCList[index].BringToFront();
         }
 
         public void SetUcPositions() //Sets up TaskUserControl location + calls TBAnswerOnClick()
@@ -254,6 +314,14 @@ namespace AbsolventskaApp
             TB.Text = string.Empty;
         }
 
+        public void AnswersReset()
+        {
+            foreach (TextBox TB in TBAnswersList)
+            {
+                TB.Text = "Type in the answer";
+            }
+        }
+
         public void AssignPic(int index) //Adds picture to Task.PictureBox
         {
             if (GetWord(index) != null && GetWord(index).Length > 0)
@@ -264,10 +332,41 @@ namespace AbsolventskaApp
             else MessageBox.Show("Error during image loading occured.");
         }
 
-        public void LastUcBTNRemove()  // change buttons in Assess UC 
+        public void ShowButtons(bool isMenu) //switching between task buttons and menu buttons
         {
-            TaskUCList[numOfTasks - 1].Controls.Find("btnNext", true).FirstOrDefault().Visible = false;
+            if (isMenu)
+            {
+                foreach (Button btn in menuButtonsList)
+                {
+                    btn.Visible = true;
+                }
+
+                foreach (Button btn in taskButtonsList)
+                {
+                    btn.Visible = false;
+                }
+
+                panelsList[2].Visible = true;
+                panelsList[0].Visible = false;
+            }
+
+            else
+            {
+                foreach (Button btn in menuButtonsList)
+                {
+                    btn.Visible = false;
+                }
+
+                foreach (Button btn in taskButtonsList)
+                {
+                    btn.Visible = true;
+                }
+
+                panelsList[2].Visible = false;
+                panelsList[0].Visible = true;
+            }
         }
+
         #endregion
 
         #region OtherFunctions
@@ -278,6 +377,17 @@ namespace AbsolventskaApp
             {
                 numOfTasks = int.Parse(reader.ReadLine());
             }
+
+            HideOtherTasks();
+
+            foreach (UserControl UC in TaskUCList)
+            {
+                UC.Controls.Find("btnConfirm", true).FirstOrDefault().Enabled = true;
+                UC.Controls.Find("btnNext", true).FirstOrDefault().Enabled = false;
+                UC.Controls.Find("btnNext", true).FirstOrDefault().Visible = true;
+            }
+
+            TaskUCList[numOfTasks - 1].Controls.Find("btnNext", true).FirstOrDefault().Visible = false; //removing next button in last task UC 
         }
 
         public void CheckAnswer(TextBox answer, int currentIndex) 
@@ -288,21 +398,21 @@ namespace AbsolventskaApp
 
                 if (currentIndex + 1 < numOfTasks)
                 {
-                    OtherUCList[0].Controls.Find("LblAnswerGood", true).FirstOrDefault().Visible = true;
-                    OtherUCList[0].Controls.Find("LblAnswerWrong", true).FirstOrDefault().Visible = false;
+                    OtherUCList[3].Controls.Find("LblAnswerGood", true).FirstOrDefault().Visible = true;
+                    OtherUCList[3].Controls.Find("LblAnswerWrong", true).FirstOrDefault().Visible = false;
                 }
 
                 else
                 {
-                    OtherUCList[0].Controls.Find("LblAnswerGood", true).FirstOrDefault().Visible = true;
-                    OtherUCList[0].Controls.Find("LblAnswerWrong", true).FirstOrDefault().Visible = false;
-                    OtherUCList[0].Controls.Find("btnConfirm", true).FirstOrDefault().Visible = true;
-                    OtherUCList[0].Controls.Find("btnContinue", true).FirstOrDefault().Visible = false;
+                    OtherUCList[3].Controls.Find("LblAnswerGood", true).FirstOrDefault().Visible = true;
+                    OtherUCList[3].Controls.Find("LblAnswerWrong", true).FirstOrDefault().Visible = false;
+                    OtherUCList[3].Controls.Find("btnConfirm", true).FirstOrDefault().Visible = true;
+                    OtherUCList[3].Controls.Find("btnContinue", true).FirstOrDefault().Visible = false;
                 }
 
-                OtherUCList[0].Location = new Point(350, 150);
-                OtherUCList[0].BringToFront();
-                OtherUCList[0].Visible = true;
+                OtherUCList[3].Location = new Point(350, 150);
+                OtherUCList[3].BringToFront();
+                OtherUCList[3].Visible = true;
 
                 TaskUCList[currentIndex].Visible = false;
                 TaskUCList[currentIndex].Controls.Find("btnConfirm", true).FirstOrDefault().Enabled = false;
@@ -312,22 +422,21 @@ namespace AbsolventskaApp
             {
                 if (currentIndex + 1 < numOfTasks)
                 {
-                    OtherUCList[0].Controls.Find("LblAnswerGood", true).FirstOrDefault().Visible = false;
-                    OtherUCList[0].Controls.Find("LblAnswerWrong", true).FirstOrDefault().Visible = true;
+                    OtherUCList[3].Controls.Find("LblAnswerGood", true).FirstOrDefault().Visible = false;
+                    OtherUCList[3].Controls.Find("LblAnswerWrong", true).FirstOrDefault().Visible = true;
                 }
 
                 else
                 {
-                    OtherUCList[0].Controls.Find("LblAnswerGood", true).FirstOrDefault().Visible = false;
-                    OtherUCList[0].Controls.Find("LblAnswerWrong", true).FirstOrDefault().Visible = true;
-
-                    OtherUCList[0].Controls.Find("btnConfirm", true).FirstOrDefault().Visible = true;
-                    OtherUCList[0].Controls.Find("btnContinue", true).FirstOrDefault().Visible = false;
+                    OtherUCList[3].Controls.Find("LblAnswerGood", true).FirstOrDefault().Visible = false;
+                    OtherUCList[3].Controls.Find("LblAnswerWrong", true).FirstOrDefault().Visible = true;
+                    OtherUCList[3].Controls.Find("btnConfirm", true).FirstOrDefault().Visible = true;
+                    OtherUCList[3].Controls.Find("btnContinue", true).FirstOrDefault().Visible = false;
                 }
 
-                OtherUCList[0].Location = new Point(350, 150);
-                OtherUCList[0].BringToFront();
-                OtherUCList[0].Visible = true;
+                OtherUCList[3].Location = new Point(350, 150);
+                OtherUCList[3].BringToFront();
+                OtherUCList[3].Visible = true;
 
                 TaskUCList[currentIndex].Visible = false;
                 TaskUCList[currentIndex].Controls.Find("btnConfirm", true).FirstOrDefault().Enabled = false;
@@ -337,17 +446,18 @@ namespace AbsolventskaApp
         public void ShowResult()
         {
             double resultPerc = ((double)numOfCorrect / (double)numOfTasks);
-            OtherUCList[1].Controls.Find("lblResult",true).FirstOrDefault().Text = string.Format("{0}/{1}", numOfCorrect, numOfTasks);
-            OtherUCList[1].Controls.Find("lblResultPercent", true).FirstOrDefault().Text = resultPerc.ToString("P", CultureInfo.InvariantCulture);
-            OtherUCList[1].Location = new Point(350, 110);
+            OtherUCList[4].Controls.Find("lblResult",true).FirstOrDefault().Text = string.Format("{0}/{1}", numOfCorrect, numOfTasks);
+            OtherUCList[4].Controls.Find("lblResultPercent", true).FirstOrDefault().Text = resultPerc.ToString("P", CultureInfo.InvariantCulture);
+            OtherUCList[4].Location = new Point(350, 110);
         }
 
         public void Speak(string input) //Reads the answer !!! finish settings for changing voice
         {
             //synthesizer.Voice.Gender = VoiceGender.Female;
-            synthesizer.SelectVoiceByHints(VoiceGender.Female, VoiceAge.Child);
-            synthesizer.Volume = 100;
-            synthesizer.Rate = -2;
+            synthesizer.SelectVoiceByHints(VoiceGender.Female);
+
+            synthesizer.Volume = speakerVolume;
+            synthesizer.Rate = -speakerRate;
             synthesizer.Speak(input);
         }
 

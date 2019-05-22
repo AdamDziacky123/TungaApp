@@ -22,8 +22,8 @@ namespace AbsolventskaApp.UserControls
         private void btnNext_Click_1(object sender, EventArgs e)
         {
             manager.AssignPic(index + 1);
-            manager.BringTaskToFront(index + 1);
-            manager.SetPanels(index + 1);
+            manager.BringControlToFront(index + 1, true);
+            manager.SetPanels(index + 1, true);
             manager.index++;
         }
 

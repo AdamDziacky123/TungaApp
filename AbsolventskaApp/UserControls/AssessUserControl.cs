@@ -22,14 +22,17 @@ namespace AbsolventskaApp.UserControls
         private void BTNContinue_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            manager.BringTaskToFront(manager.index);
+            manager.BringControlToFront(manager.index, true);
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            btnConfirm.Visible = false;
+            btnContinue.Visible = true;
             this.Visible = false;
-            manager.OtherUCList[1].BringToFront();
-            manager.OtherUCList[1].Visible = true;
+
+            manager.OtherUCList[4].BringToFront();
+            manager.OtherUCList[4].Visible = true;
             manager.ShowResult();
         }
     }

@@ -47,13 +47,14 @@ namespace AbsolventskaApp.UserControls
 
         private void Start()
         {
+            manager.FillLists((Form1)Form1.ActiveForm);
             manager.AssignTaskNum();
-            manager.HideOtherTasks();
-            manager.LastUcBTNRemove();
+            manager.AnswersReset();
 
+            manager.ShowButtons(false);
             manager.AssignPic(0);
-            manager.BringTaskToFront(0);
-            manager.SetPanels(0);
+            manager.BringControlToFront(0, true);
+            manager.SetPanels(0, true);
         }
     }
 }

@@ -33,16 +33,10 @@ namespace AbsolventskaApp //last task confirm button + menu + settings
             foreach (UserControl c in manager.GetUCList())
             {
                 c.Visible = false;
-                c.Enabled = false;
-            }
-
-            foreach (Button btn in manager.GetButtonsList())
-            {
-                btn.Enabled = false;
-                btn.Visible = true;
             }
 
             pnlLogo.BringToFront();
+            pnlSideSmall.Visible = false;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -55,5 +49,22 @@ namespace AbsolventskaApp //last task confirm button + menu + settings
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void btnWelcome_Click(object sender, EventArgs e)
+        {
+            manager.SetPanels(0, false);
+            manager.BringControlToFront(0,false);            
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            manager.SetPanels(1, false);
+            manager.BringControlToFront(1, false);
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            manager.SetPanels(2, false);
+            manager.BringControlToFront(2, false);
+        }
     }
 }
