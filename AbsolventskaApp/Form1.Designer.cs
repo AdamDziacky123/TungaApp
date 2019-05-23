@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.PBLogo = new System.Windows.Forms.PictureBox();
@@ -115,7 +114,7 @@
             // 
             // PBLogo
             // 
-            this.PBLogo.Image = ((System.Drawing.Image)(resources.GetObject("PBLogo.Image")));
+            this.PBLogo.Image = global::AbsolventskaApp.Properties.Resources.Logo_PNG;
             this.PBLogo.Location = new System.Drawing.Point(19, 34);
             this.PBLogo.Name = "PBLogo";
             this.PBLogo.Size = new System.Drawing.Size(125, 154);
@@ -534,7 +533,7 @@
             // 
             this.btnMinimize.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
-            this.btnMinimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimize.BackgroundImage")));
+            this.btnMinimize.BackgroundImage = global::AbsolventskaApp.Properties.Resources.FreeMinimizeIconBlackPNG;
             this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -549,7 +548,7 @@
             // 
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
-            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
+            this.btnExit.BackgroundImage = global::AbsolventskaApp.Properties.Resources.FreeCloseIconBlackPNG;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -794,7 +793,6 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1920, 1051);
-            this.Controls.Add(this.settingsUserControl1);
             this.Controls.Add(this.pnlLogo);
             this.Controls.Add(this.startUserControl1);
             this.Controls.Add(this.panel2);
@@ -822,6 +820,7 @@
             this.Controls.Add(this.resultUserControl1);
             this.Controls.Add(this.assessUserControl1);
             this.Controls.Add(this.menuUserControl1);
+            this.Controls.Add(this.settingsUserControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

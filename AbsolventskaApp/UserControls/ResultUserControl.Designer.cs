@@ -68,9 +68,10 @@
             // 
             // btnFinish
             // 
-            this.btnFinish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
+            this.btnFinish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
             this.btnFinish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinish.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.btnFinish.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.btnFinish.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
             this.btnFinish.Location = new System.Drawing.Point(484, 459);
             this.btnFinish.Name = "btnFinish";
             this.btnFinish.Size = new System.Drawing.Size(303, 72);

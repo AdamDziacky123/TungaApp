@@ -29,23 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartUserControl));
-            this.StartUcPB = new System.Windows.Forms.PictureBox();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.StartUcPB = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.StartUcPB)).BeginInit();
             this.SuspendLayout();
-            // 
-            // StartUcPB
-            // 
-            this.StartUcPB.BackColor = System.Drawing.Color.Silver;
-            this.StartUcPB.Image = ((System.Drawing.Image)(resources.GetObject("StartUcPB.Image")));
-            this.StartUcPB.Location = new System.Drawing.Point(403, 218);
-            this.StartUcPB.Name = "StartUcPB";
-            this.StartUcPB.Size = new System.Drawing.Size(400, 400);
-            this.StartUcPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.StartUcPB.TabIndex = 0;
-            this.StartUcPB.TabStop = false;
             // 
             // lblWelcome
             // 
@@ -61,11 +51,11 @@
             // 
             // btnStart
             // 
-            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
+            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
             this.btnStart.FlatAppearance.BorderSize = 0;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.btnStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
+            this.btnStart.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
             this.btnStart.Location = new System.Drawing.Point(499, 804);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(200, 60);
@@ -85,12 +75,32 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "You are about to learn something new.";
             // 
+            // StartUcPB
+            // 
+            this.StartUcPB.BackColor = System.Drawing.Color.Silver;
+            this.StartUcPB.Image = ((System.Drawing.Image)(resources.GetObject("StartUcPB.Image")));
+            this.StartUcPB.Location = new System.Drawing.Point(403, 218);
+            this.StartUcPB.Name = "StartUcPB";
+            this.StartUcPB.Size = new System.Drawing.Size(400, 400);
+            this.StartUcPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.StartUcPB.TabIndex = 0;
+            this.StartUcPB.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
+            this.panel1.Location = new System.Drawing.Point(299, 135);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(600, 3);
+            this.panel1.TabIndex = 36;
+            // 
             // StartUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblWelcome);
@@ -111,5 +121,6 @@
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

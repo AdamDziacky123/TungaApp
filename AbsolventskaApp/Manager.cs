@@ -32,7 +32,7 @@ namespace AbsolventskaApp
         public int numOfTasks;
         public int numOfCorrect = 0;
         public int speakerVolume = 50;
-        public int speakerRate = -2;
+        public int speakerRate = -3;
         public VoiceGender speakerGender = VoiceGender.Female;
         static Manager instance = new Manager();
 
@@ -453,11 +453,10 @@ namespace AbsolventskaApp
 
         public void Speak(string input) //Reads the answer !!! finish settings for changing voice
         {
-            //synthesizer.Voice.Gender = VoiceGender.Female;
-            synthesizer.SelectVoiceByHints(VoiceGender.Female);
+            synthesizer.SelectVoiceByHints(speakerGender);
 
             synthesizer.Volume = speakerVolume;
-            synthesizer.Rate = -speakerRate;
+            synthesizer.Rate = speakerRate;
             synthesizer.Speak(input);
         }
 

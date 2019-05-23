@@ -33,6 +33,7 @@
             this.btnAnimals = new System.Windows.Forms.Button();
             this.btnWut = new System.Windows.Forms.Button();
             this.btnOwn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label1
@@ -48,10 +49,11 @@
             // 
             // btnNumbers
             // 
-            this.btnNumbers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
+            this.btnNumbers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
+            this.btnNumbers.FlatAppearance.BorderSize = 0;
             this.btnNumbers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNumbers.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.btnNumbers.ForeColor = System.Drawing.Color.Black;
+            this.btnNumbers.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnNumbers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
             this.btnNumbers.Location = new System.Drawing.Point(454, 321);
             this.btnNumbers.Name = "btnNumbers";
             this.btnNumbers.Size = new System.Drawing.Size(313, 57);
@@ -62,10 +64,11 @@
             // 
             // btnAnimals
             // 
-            this.btnAnimals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
+            this.btnAnimals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
+            this.btnAnimals.FlatAppearance.BorderSize = 0;
             this.btnAnimals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnimals.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.btnAnimals.ForeColor = System.Drawing.Color.Black;
+            this.btnAnimals.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnAnimals.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
             this.btnAnimals.Location = new System.Drawing.Point(454, 409);
             this.btnAnimals.Name = "btnAnimals";
             this.btnAnimals.Size = new System.Drawing.Size(313, 57);
@@ -76,10 +79,11 @@
             // 
             // btnWut
             // 
-            this.btnWut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
+            this.btnWut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
+            this.btnWut.FlatAppearance.BorderSize = 0;
             this.btnWut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWut.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.btnWut.ForeColor = System.Drawing.Color.Black;
+            this.btnWut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnWut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
             this.btnWut.Location = new System.Drawing.Point(454, 495);
             this.btnWut.Name = "btnWut";
             this.btnWut.Size = new System.Drawing.Size(313, 57);
@@ -90,10 +94,11 @@
             // 
             // btnOwn
             // 
-            this.btnOwn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
+            this.btnOwn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
+            this.btnOwn.FlatAppearance.BorderSize = 0;
             this.btnOwn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOwn.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.btnOwn.ForeColor = System.Drawing.Color.Black;
+            this.btnOwn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnOwn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
             this.btnOwn.Location = new System.Drawing.Point(454, 582);
             this.btnOwn.Name = "btnOwn";
             this.btnOwn.Size = new System.Drawing.Size(313, 57);
@@ -102,11 +107,20 @@
             this.btnOwn.UseVisualStyleBackColor = false;
             this.btnOwn.Click += new System.EventHandler(this.btnOwn_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
+            this.panel1.Location = new System.Drawing.Point(310, 135);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(600, 3);
+            this.panel1.TabIndex = 35;
+            // 
             // MenuUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnOwn);
             this.Controls.Add(this.btnWut);
             this.Controls.Add(this.btnAnimals);
@@ -126,5 +140,6 @@
         private System.Windows.Forms.Button btnAnimals;
         private System.Windows.Forms.Button btnWut;
         private System.Windows.Forms.Button btnOwn;
+        private System.Windows.Forms.Panel panel1;
     }
 }
