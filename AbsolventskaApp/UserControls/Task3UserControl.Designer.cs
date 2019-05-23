@@ -34,6 +34,7 @@
             this.btnConfirm = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.TBAnswer3 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,11 +118,20 @@
             this.TBAnswer3.Text = "Type in the answer";
             this.TBAnswer3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
+            this.panel1.Location = new System.Drawing.Point(290, 120);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(600, 3);
+            this.panel1.TabIndex = 37;
+            // 
             // Task3UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.TBAnswer3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPlay);
@@ -144,5 +154,6 @@
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TBAnswer3;
+        private System.Windows.Forms.Panel panel1;
     }
 }

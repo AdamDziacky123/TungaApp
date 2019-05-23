@@ -34,6 +34,7 @@
             this.TBAnswer1 = new System.Windows.Forms.TextBox();
             this.btnPlay = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,11 +118,20 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Task 1";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
+            this.panel1.Location = new System.Drawing.Point(291, 120);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(600, 3);
+            this.panel1.TabIndex = 36;
+            // 
             // Task1UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.TBAnswer1);
             this.Controls.Add(this.btnNext);
@@ -144,5 +154,6 @@
         private System.Windows.Forms.TextBox TBAnswer1;
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

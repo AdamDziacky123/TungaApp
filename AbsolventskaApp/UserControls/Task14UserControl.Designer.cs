@@ -34,6 +34,7 @@
             this.btnPlay = new System.Windows.Forms.Button();
             this.TBAnswer14 = new System.Windows.Forms.TextBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,11 +116,20 @@
             this.pictureBox14.TabIndex = 42;
             this.pictureBox14.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
+            this.panel1.Location = new System.Drawing.Point(290, 120);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(600, 3);
+            this.panel1.TabIndex = 48;
+            // 
             // Task14UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.label1);
@@ -142,5 +152,6 @@
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.TextBox TBAnswer14;
         private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.Panel panel1;
     }
 }
