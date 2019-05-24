@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using System.Speech.Synthesis;
 
 
-namespace AbsolventskaApp.UserControls
+namespace AbsolventskaApp.UserControls 
 {
 
     public partial class SettingsUserControl : UserControl
