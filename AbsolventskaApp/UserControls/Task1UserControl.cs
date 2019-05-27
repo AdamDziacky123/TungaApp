@@ -5,7 +5,7 @@ namespace AbsolventskaApp.UserControls
 {
     public partial class Task1UserControl : UserControl
     {
-        int index = Manager.GetInstance().index;
+        public int index = Manager.GetInstance().index;
         Manager manager = Manager.GetInstance();
 
         public Task1UserControl()
@@ -29,7 +29,6 @@ namespace AbsolventskaApp.UserControls
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            btnNext.Enabled = true;
             manager.CheckAnswer(TBAnswer1, index);
         }
 

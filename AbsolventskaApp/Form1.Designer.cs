@@ -114,7 +114,7 @@
             // 
             // PBLogo
             // 
-            this.PBLogo.Image = global::AbsolventskaApp.Properties.Resources.Logo_PNG;
+            this.PBLogo.Image = global::AbsolventskaApp.Properties.Resources.LogoPNG;
             this.PBLogo.Location = new System.Drawing.Point(19, 34);
             this.PBLogo.Name = "PBLogo";
             this.PBLogo.Size = new System.Drawing.Size(125, 154);

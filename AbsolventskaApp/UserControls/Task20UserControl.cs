@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace AbsolventskaApp.UserControls
 {
-    public partial class Task20UserControl : UserControl //: MyUserControl
+    public partial class Task20UserControl : UserControl
     {
         int index = Manager.GetInstance().index;
         Manager manager = Manager.GetInstance();

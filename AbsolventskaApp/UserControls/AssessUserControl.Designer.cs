@@ -32,6 +32,7 @@
             this.btnContinue = new System.Windows.Forms.Button();
             this.LBLAnswerWrong = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
+            this.lblCorrectAnswer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LblAnswerGood
@@ -58,7 +59,7 @@
             this.btnContinue.TabIndex = 1;
             this.btnContinue.Text = "Continue";
             this.btnContinue.UseVisualStyleBackColor = false;
-            this.btnContinue.Click += new System.EventHandler(this.BTNContinue_Click);
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // LBLAnswerWrong
             // 
@@ -87,11 +88,23 @@
             this.btnConfirm.Visible = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
+            // lblCorrectAnswer
+            // 
+            this.lblCorrectAnswer.AutoSize = true;
+            this.lblCorrectAnswer.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.lblCorrectAnswer.Location = new System.Drawing.Point(423, 329);
+            this.lblCorrectAnswer.Name = "lblCorrectAnswer";
+            this.lblCorrectAnswer.Size = new System.Drawing.Size(341, 37);
+            this.lblCorrectAnswer.TabIndex = 4;
+            this.lblCorrectAnswer.Text = "The correct answer is : ";
+            this.lblCorrectAnswer.Visible = false;
+            // 
             // AssessUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.lblCorrectAnswer);
             this.Controls.Add(this.btnContinue);
             this.Controls.Add(this.LBLAnswerWrong);
             this.Controls.Add(this.LblAnswerGood);
@@ -109,5 +122,6 @@
         private System.Windows.Forms.Button btnContinue;
         private System.Windows.Forms.Label LBLAnswerWrong;
         private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Label lblCorrectAnswer;
     }
 }

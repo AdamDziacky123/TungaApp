@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Logo PNG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="LogoPNG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo PNG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FreeMinimizeIconBlackPNG" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -127,7 +127,383 @@
   <data name="FreeCloseIconBlackPNG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FreeCloseIconBlackPNG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo App Blue Grey F" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="LogoAppF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo App Blue Grey F.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="n0Answer" xml:space="preserve">
+    <value>Zero</value>
+    <comment>number to 10 exercise answers</comment>
+  </data>
+  <data name="n10Answer" xml:space="preserve">
+    <value>Ten</value>
+  </data>
+  <data name="n1Answer" xml:space="preserve">
+    <value>One</value>
+  </data>
+  <data name="n2Answer" xml:space="preserve">
+    <value>Two</value>
+  </data>
+  <data name="n3Answer" xml:space="preserve">
+    <value>Three</value>
+  </data>
+  <data name="n4Answer" xml:space="preserve">
+    <value>Four</value>
+  </data>
+  <data name="n5Answer" xml:space="preserve">
+    <value>Five</value>
+  </data>
+  <data name="n6Answer" xml:space="preserve">
+    <value>Six</value>
+  </data>
+  <data name="n7Answer" xml:space="preserve">
+    <value>Seven</value>
+  </data>
+  <data name="n8Answer" xml:space="preserve">
+    <value>Eight</value>
+  </data>
+  <data name="n9Answer" xml:space="preserve">
+    <value>Nine</value>
+  </data>
+  <data name="a1Answer" xml:space="preserve">
+    <value>Pig</value>
+    <comment>Animal exercise answers</comment>
+  </data>
+  <data name="a2Answer" xml:space="preserve">
+    <value>Bird</value>
+  </data>
+  <data name="a3Answer" xml:space="preserve">
+    <value>Tiger</value>
+  </data>
+  <data name="a4Answer" xml:space="preserve">
+    <value>Zebra</value>
+  </data>
+  <data name="a5Answer" xml:space="preserve">
+    <value>Mouse</value>
+  </data>
+  <data name="a6Answer" xml:space="preserve">
+    <value>Cat</value>
+  </data>
+  <data name="a7Answer" xml:space="preserve">
+    <value>Dog</value>
+  </data>
+  <data name="a1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a8Answer" xml:space="preserve">
+    <value>Bee</value>
+    <comment>adding two more to animals</comment>
+  </data>
+  <data name="a9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a9.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a9Answer" xml:space="preserve">
+    <value>Rabbit</value>
+  </data>
+  <data name="c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c1Answer" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="c2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c2Answer" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="c3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c3Answer" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="c4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c4Answer" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="c5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c5Answer" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="c6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c6Answer" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="c7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c7Answer" xml:space="preserve">
+    <value>Brown</value>
+  </data>
+  <data name="c8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c8Answer" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="c9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c9Answer" xml:space="preserve">
+    <value>Purple</value>
+  </data>
+  <data name="cl1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cl1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cl10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cl10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cl10Answer" xml:space="preserve">
+    <value>Dress</value>
+  </data>
+  <data name="cl1Answer" xml:space="preserve">
+    <value>T-Shirt</value>
+  </data>
+  <data name="cl2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cl2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cl2Answer" xml:space="preserve">
+    <value>Trousers</value>
+  </data>
+  <data name="cl3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cl3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cl3Answer" xml:space="preserve">
+    <value>Socks</value>
+  </data>
+  <data name="cl4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cl4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cl4Answer" xml:space="preserve">
+    <value>Hat</value>
+  </data>
+  <data name="cl5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cl5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cl5Answer" xml:space="preserve">
+    <value>Cap</value>
+  </data>
+  <data name="cl6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cl6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cl6Answer" xml:space="preserve">
+    <value>Skirt</value>
+  </data>
+  <data name="cl7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cl7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cl7Answer" xml:space="preserve">
+    <value>Sweater</value>
+  </data>
+  <data name="cl8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cl8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cl8Answer" xml:space="preserve">
+    <value>Shoes</value>
+  </data>
+  <data name="cl9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cl9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cl9Answer" xml:space="preserve">
+    <value>Sandals</value>
+  </data>
+  <data name="f1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f10Answer" xml:space="preserve">
+    <value>Apple</value>
+  </data>
+  <data name="f11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f11Answer" xml:space="preserve">
+    <value>Pear</value>
+  </data>
+  <data name="f12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f12Answer" xml:space="preserve">
+    <value>Carrot</value>
+  </data>
+  <data name="f13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f13Answer" xml:space="preserve">
+    <value>Bread</value>
+  </data>
+  <data name="f1Answer" xml:space="preserve">
+    <value>Meat</value>
+  </data>
+  <data name="f2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f2Answer" xml:space="preserve">
+    <value>Egg</value>
+  </data>
+  <data name="f3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f3Answer" xml:space="preserve">
+    <value>Butter</value>
+  </data>
+  <data name="f4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f4Answer" xml:space="preserve">
+    <value>Cheese</value>
+  </data>
+  <data name="f5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f5Answer" xml:space="preserve">
+    <value>Strawberry</value>
+  </data>
+  <data name="f6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f6Answer" xml:space="preserve">
+    <value>Banana</value>
+  </data>
+  <data name="f7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f7Answer" xml:space="preserve">
+    <value>Tomato</value>
+  </data>
+  <data name="f8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f8Answer" xml:space="preserve">
+    <value>Milk</value>
+  </data>
+  <data name="f9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f9Answer" xml:space="preserve">
+    <value>Juice</value>
+  </data>
+  <data name="nB1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nB1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nB10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nB10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nB10Answer" xml:space="preserve">
+    <value>Hundred</value>
+  </data>
+  <data name="nB1Answer" xml:space="preserve">
+    <value>Ten</value>
+    <comment>number to 100 Exercise answers</comment>
+  </data>
+  <data name="nB2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nB2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nB2Answer" xml:space="preserve">
+    <value>Twenty</value>
+  </data>
+  <data name="nB3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nB3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nB3Answer" xml:space="preserve">
+    <value>Thirty</value>
+  </data>
+  <data name="nB4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nB4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nB4Answer" xml:space="preserve">
+    <value>Forty</value>
+  </data>
+  <data name="nB5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nB5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nB5Answer" xml:space="preserve">
+    <value>Fifty</value>
+  </data>
+  <data name="nB6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nB6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nB6Answer" xml:space="preserve">
+    <value>Sixty</value>
+  </data>
+  <data name="nB7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nB7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nB7Answer" xml:space="preserve">
+    <value>Seventy</value>
+  </data>
+  <data name="nB8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nB8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nB8Answer" xml:space="preserve">
+    <value>Eighty</value>
+  </data>
+  <data name="nB9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nB9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nB9Answer" xml:space="preserve">
+    <value>Ninety</value>
   </data>
 </root>

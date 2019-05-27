@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace AbsolventskaApp.UserControls
 {
-    public partial class Task10UserControl : UserControl //: MyUserControl
+    public partial class Task10UserControl : UserControl
     {
         int index = Manager.GetInstance().index;
         Manager manager = Manager.GetInstance();
@@ -29,8 +29,6 @@ namespace AbsolventskaApp.UserControls
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            //manager.AddToAnswers((Form1)Form1.ActiveForm);
-            btnNext.Enabled = true;
             manager.CheckAnswer(TBAnswer10, index);
         }
 

@@ -23,10 +23,11 @@ namespace AbsolventskaApp.UserControls
         {
             //bring Start to front
             Visible = false;
-            manager.OtherUCList[0].BringToFront();
-            manager.OtherUCList[0].Visible = true;
+            manager.otherUCList[0].BringToFront();
+            manager.otherUCList[0].Visible = true;
             manager.ShowButtons(true);
             manager.SetPanels(0,false);
+            manager.NewGame();
         }
     }
 }

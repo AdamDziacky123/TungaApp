@@ -108,7 +108,6 @@
             this.DoubleBuffered = true;
             this.Name = "StartUserControl";
             this.Size = new System.Drawing.Size(1200, 900);
-            this.Load += new System.EventHandler(this.StartUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StartUcPB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

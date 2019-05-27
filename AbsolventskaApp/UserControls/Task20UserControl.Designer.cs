@@ -34,6 +34,7 @@
             this.TBAnswer20 = new System.Windows.Forms.TextBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNext = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,11 +108,27 @@
             this.panel1.Size = new System.Drawing.Size(600, 3);
             this.panel1.TabIndex = 83;
             // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
+            this.btnNext.Enabled = false;
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnNext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
+            this.btnNext.Location = new System.Drawing.Point(1126, 405);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(125, 50);
+            this.btnNext.TabIndex = 84;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = false;
+            // 
             // Task20UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.label1);
@@ -133,5 +150,6 @@
         private System.Windows.Forms.TextBox TBAnswer20;
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnNext;
     }
 }

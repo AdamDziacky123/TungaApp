@@ -10,11 +10,12 @@ using System.Windows.Forms;
 using AbsolventskaApp.UserControls;
 using System.Security;
 
-namespace AbsolventskaApp //last task confirm button + menu + settings
+namespace AbsolventskaApp
 {
     public partial class Form1 : Form
     {
         Manager manager = Manager.GetInstance();
+        static Form1 instance;
 
         public Form1()
         {
@@ -22,8 +23,21 @@ namespace AbsolventskaApp //last task confirm button + menu + settings
             Icon icon = Icon.ExtractAssociatedIcon(@"D:\Podklady\Absolventská\Logo\Icon.ico");
             this.Icon = icon;
 
+            instance = this;
+            manager.AddOtherUCs(this);
+            manager.AddMenuButtonsToList(this);
+            manager.AddPanelsToList(this);
+            manager.AddExAnswers();
+
             manager.FillLists(this);
             manager.SetUcPositions();
+
+            if (Environment.GetEnvironmentVariable("Tunga", EnvironmentVariableTarget.User) == null) manager.GetOtherUCList()[1].Controls.Find("btnOwn", true).FirstOrDefault().Enabled = false;
+        }
+
+        public static Form1 GetInstance()
+        {
+            return instance;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -37,6 +51,7 @@ namespace AbsolventskaApp //last task confirm button + menu + settings
 
             pnlLogo.BringToFront();
             pnlSideSmall.Visible = false;
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)

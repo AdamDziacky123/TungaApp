@@ -19,35 +19,54 @@ namespace AbsolventskaApp.UserControls
             InitializeComponent();
         }
 
+        #region btn_Click
+
         private void btnNumbers_Click(object sender, EventArgs e)
         {
-            manager.SetPath_files(@"C:\Users\Adam\source\repos\GitHub\TungaEditorGitRepo\Absolventska\bin\Debug\Tunga Files\Numbers");
-            manager.SetPath_words(@"C:\Users\Adam\source\repos\GitHub\TungaEditorGitRepo\Absolventska\bin\Debug\Tunga Files\Numbers\Words.txt");
+            manager.SetNumBool();
             Start();
         }
 
         private void btnAnimals_Click(object sender, EventArgs e)
         {
-            manager.SetPath_files(@"C:\Users\Adam\source\repos\GitHub\TungaEditorGitRepo\Absolventska\bin\Debug\Tunga Files\Animals");
-            manager.SetPath_words(@"C:\Users\Adam\source\repos\GitHub\TungaEditorGitRepo\Absolventska\bin\Debug\Tunga Files\Animals\Words.txt");
+            manager.SetAnimBool();
             Start();
-        }
-
-        private void btnWut_Click(object sender, EventArgs e) //to be continued
-        {
-
         }
 
         private void btnOwn_Click(object sender, EventArgs e)
         {
-            manager.SetPath_files(@"C:\Users\Adam\source\repos\GitHub\TungaEditorGitRepo\Absolventska\bin\Debug\Tunga Files");
-            manager.SetPath_words(@"C:\Users\Adam\source\repos\GitHub\TungaEditorGitRepo\Absolventska\bin\Debug\Tunga Files\Words.txt");
+            manager.SetOwnBool();
             Start();
         }
 
+        private void btnColours_Click(object sender, EventArgs e)
+        {
+            manager.SetColourBool();
+            Start();
+        }
+
+        private void btnNumbers100_Click(object sender, EventArgs e)
+        {
+            manager.SetNum100Bool();
+            Start();
+        }
+
+        private void btnFood_Click(object sender, EventArgs e)
+        {
+            manager.SetFoodBool();
+            Start();
+        }
+
+        private void btnClothing_Click(object sender, EventArgs e)
+        {
+            manager.SetClothingBool();
+            Start();
+        }
+
+        #endregion
+
         private void Start()
         {
-            manager.FillLists((Form1)Form1.ActiveForm);
             manager.AssignTaskNum();
             manager.AnswersReset();
 

@@ -8,7 +8,7 @@ namespace AbsolventskaApp.UserControls
 
     public partial class SettingsUserControl : UserControl
     {
-        Manager manager = Manager.GetInstance();
+        Manager manager = Manager.GetInstance(); // Changing path option is here because not every PC will have an editor
 
         public SettingsUserControl()
         {
@@ -26,7 +26,7 @@ namespace AbsolventskaApp.UserControls
         private void BarRate_Scroll(object sender, EventArgs e)
         {
             manager.speakerRate = BarRate.Value;
-        }
+        } //Rate
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) //VoiceGender
         {
@@ -53,13 +53,13 @@ namespace AbsolventskaApp.UserControls
                     {
                         manager.SetPath_files(lblPath.Text);
                         manager.SetPath_words(lblPath.Text + @"\Words.txt");
-                        MessageBox.Show("Path changed successfully.");
+                        MessageBox.Show("Path changed successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
-                    else MessageBox.Show("Keeping the old path.");
+                    else MessageBox.Show("Keeping the old path.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
-                else MessageBox.Show("Please, insert a path.");
+                else MessageBox.Show("Please, insert a path.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }

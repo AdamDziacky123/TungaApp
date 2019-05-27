@@ -22,14 +22,9 @@ namespace AbsolventskaApp
         private void btnStart_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            manager.OtherUCList[1].BringToFront();
-            manager.OtherUCList[1].Visible = true;
+            manager.otherUCList[1].BringToFront();
+            manager.otherUCList[1].Visible = true;
             manager.SetPanels(1, false);
-        }
-
-        private void StartUserControl_Load(object sender, EventArgs e)
-        {
-            this.Location = manager.taskPosition;
         }
     }
 }
