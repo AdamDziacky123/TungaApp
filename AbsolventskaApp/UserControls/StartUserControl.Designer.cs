@@ -56,7 +56,7 @@
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStart.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
-            this.btnStart.Location = new System.Drawing.Point(499, 804);
+            this.btnStart.Location = new System.Drawing.Point(499, 754);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(200, 60);
             this.btnStart.TabIndex = 3;
@@ -69,7 +69,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.label1.Location = new System.Drawing.Point(359, 695);
+            this.label1.Location = new System.Drawing.Point(359, 659);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(480, 30);
             this.label1.TabIndex = 4;

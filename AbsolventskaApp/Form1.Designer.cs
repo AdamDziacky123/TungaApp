@@ -114,7 +114,7 @@
             // 
             // PBLogo
             // 
-            this.PBLogo.Image = global::AbsolventskaApp.Properties.Resources.LogoPNG;
+            this.PBLogo.Image = global::TungaApp.Properties.Resources.LogoPNG;
             this.PBLogo.Location = new System.Drawing.Point(19, 34);
             this.PBLogo.Name = "PBLogo";
             this.PBLogo.Size = new System.Drawing.Size(125, 154);
@@ -153,7 +153,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(183, 1051);
+            this.panel1.Size = new System.Drawing.Size(183, 950);
             this.panel1.TabIndex = 27;
             // 
             // btnSettings
@@ -526,18 +526,18 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(183, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1737, 34);
+            this.panel2.Size = new System.Drawing.Size(1517, 34);
             this.panel2.TabIndex = 28;
             // 
             // btnMinimize
             // 
             this.btnMinimize.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
-            this.btnMinimize.BackgroundImage = global::AbsolventskaApp.Properties.Resources.FreeMinimizeIconBlackPNG;
+            this.btnMinimize.BackgroundImage = global::TungaApp.Properties.Resources.FreeMinimizeIconBlackPNG;
             this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Location = new System.Drawing.Point(1665, 4);
+            this.btnMinimize.Location = new System.Drawing.Point(1445, 4);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(25, 25);
             this.btnMinimize.TabIndex = 51;
@@ -548,11 +548,11 @@
             // 
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
-            this.btnExit.BackgroundImage = global::AbsolventskaApp.Properties.Resources.FreeCloseIconBlackPNG;
+            this.btnExit.BackgroundImage = global::TungaApp.Properties.Resources.FreeCloseIconBlackPNG;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(1703, 4);
+            this.btnExit.Location = new System.Drawing.Point(1483, 4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(25, 25);
             this.btnExit.TabIndex = 50;
@@ -792,7 +792,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1920, 1051);
+            this.ClientSize = new System.Drawing.Size(1700, 950);
             this.Controls.Add(this.pnlLogo);
             this.Controls.Add(this.startUserControl1);
             this.Controls.Add(this.panel2);

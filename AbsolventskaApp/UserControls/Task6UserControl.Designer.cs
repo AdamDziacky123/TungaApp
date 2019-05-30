@@ -45,7 +45,7 @@
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlay.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnPlay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
-            this.btnPlay.Location = new System.Drawing.Point(866, 810);
+            this.btnPlay.Location = new System.Drawing.Point(866, 752);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(125, 50);
             this.btnPlay.TabIndex = 21;
@@ -58,7 +58,7 @@
             this.TBAnswer6.BackColor = System.Drawing.Color.Silver;
             this.TBAnswer6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TBAnswer6.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.TBAnswer6.Location = new System.Drawing.Point(441, 711);
+            this.TBAnswer6.Location = new System.Drawing.Point(441, 690);
             this.TBAnswer6.Name = "TBAnswer6";
             this.TBAnswer6.Size = new System.Drawing.Size(300, 37);
             this.TBAnswer6.TabIndex = 20;
@@ -68,7 +68,7 @@
             // pictureBox6
             // 
             this.pictureBox6.ImageLocation = "";
-            this.pictureBox6.Location = new System.Drawing.Point(191, 180);
+            this.pictureBox6.Location = new System.Drawing.Point(191, 154);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(800, 500);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -83,7 +83,7 @@
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnNext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
-            this.btnNext.Location = new System.Drawing.Point(1126, 405);
+            this.btnNext.Location = new System.Drawing.Point(1126, 379);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(125, 50);
             this.btnNext.TabIndex = 17;
@@ -98,7 +98,7 @@
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirm.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(210)))), ((int)(((byte)(226)))));
-            this.btnConfirm.Location = new System.Drawing.Point(191, 810);
+            this.btnConfirm.Location = new System.Drawing.Point(191, 752);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(125, 50);
             this.btnConfirm.TabIndex = 16;

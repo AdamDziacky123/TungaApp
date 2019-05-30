@@ -23,8 +23,7 @@ namespace AbsolventskaApp.UserControls
         {
             //bring Start to front
             Visible = false;
-            manager.otherUCList[0].BringToFront();
-            manager.otherUCList[0].Visible = true;
+            manager.BringControlToFront(0, false);
             manager.ShowButtons(true);
             manager.SetPanels(0,false);
             manager.NewGame();

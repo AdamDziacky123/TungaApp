@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using AbsolventskaApp.UserControls;
 using System.Security;
@@ -20,8 +19,6 @@ namespace AbsolventskaApp
         public Form1()
         {
             InitializeComponent();
-            Icon icon = Icon.ExtractAssociatedIcon(@"D:\Podklady\Absolventská\Logo\Icon.ico");
-            this.Icon = icon;
 
             instance = this;
             manager.AddOtherUCs(this);

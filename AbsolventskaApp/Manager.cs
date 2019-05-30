@@ -7,10 +7,6 @@ using System.Drawing;
 using System.Globalization;
 using System.Resources;
 using System.IO;
-using System.Collections;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Reflection;
 
 namespace AbsolventskaApp
 {
@@ -38,7 +34,7 @@ namespace AbsolventskaApp
         private List<string> foodExAnswers = new List<string>(); //answers to Food exercise
         private List<string> clothingExAnswers = new List<string>(); //answers to Clothing exercise
 
-        public Point taskPosition = new Point(390, 80);
+        public Point taskPosition = new Point(390, 80); // default
 
         public int numOfTasks; // pocet poloziek
         public int numOfCorrect = 0;
@@ -57,7 +53,7 @@ namespace AbsolventskaApp
         private bool isFoodExercise;
         private bool isClothingExercise;
 
-        ResourceManager resourceManager = new ResourceManager(typeof(AbsolventskaApp.Properties.Resources));
+        ResourceManager resourceManager = new ResourceManager(typeof(TungaApp.Properties.Resources));
         ResourceSet rSet; // for adding the answers from resources
         static Manager instance = new Manager();
 
@@ -380,11 +376,18 @@ namespace AbsolventskaApp
                 otherUCList[index].Visible = true;
                 otherUCList[index].BringToFront();
             }
+
+            panelsList[1].BringToFront(); // Panel with Logo
         }
 
         public void SetUcPositions() //Sets up TaskUserControl location + calls TBAnswerOnClick()
         {
             int tmp = 1;
+
+            //MessageBox.Show(Screen.PrimaryScreen.Bounds.Width.ToString());
+            
+            if (Screen.PrimaryScreen.Bounds.Width == 1920 && Screen.PrimaryScreen.Bounds.Height == 1080) taskPosition = new Point(390, 80);
+            else if (Screen.PrimaryScreen.Bounds.Width == 1366 && Screen.PrimaryScreen.Bounds.Height == 768) taskPosition = new Point(300, 50);
 
             foreach (UserControl UC in TaskUCList)
             {
@@ -397,6 +400,8 @@ namespace AbsolventskaApp
             {
                 UC.Location = taskPosition;
             }
+
+            
         }
 
         private void TBAnswerOnClick(object sender, EventArgs e) // hides text from Answer textbox
@@ -561,7 +566,8 @@ namespace AbsolventskaApp
                         otherUCList[3].Controls.Find("btnContinue", true).FirstOrDefault().Visible = false;
                     }
 
-                    otherUCList[3].Location = new Point(350, 150);
+                    otherUCList[3].Location = new Point(350, 150); //default
+                    if(Screen.PrimaryScreen.Bounds.Width == 1366 && Screen.PrimaryScreen.Bounds.Height == 768) otherUCList[3].Location = new Point(270, 100);
                     otherUCList[3].BringToFront();
                     otherUCList[3].Visible = true;
 
@@ -589,7 +595,6 @@ namespace AbsolventskaApp
                         otherUCList[3].Controls.Find("lblCorrectAnswer", true).FirstOrDefault().Text = string.Format("The correct answer is : {0}", GetWord(index));
                     }
 
-                    otherUCList[3].Location = new Point(350, 150);
                     otherUCList[3].BringToFront();
                     otherUCList[3].Visible = true;
 
@@ -598,6 +603,11 @@ namespace AbsolventskaApp
                 }
 
                 TaskUCList[currentIndex].Controls.Find("btnNext", true).FirstOrDefault().Enabled = true;
+
+                if (Screen.PrimaryScreen.Bounds.Width == 1366 && Screen.PrimaryScreen.Bounds.Height == 768) otherUCList[3].Location = new Point(270, 100);
+                else otherUCList[3].Location = new Point(350, 150); //default
+
+                panelsList[1].BringToFront();
             }
 
             else
@@ -612,7 +622,11 @@ namespace AbsolventskaApp
             double resultPerc = ((double)numOfCorrect / (double)numOfTasks);
             otherUCList[4].Controls.Find("lblResult",true).FirstOrDefault().Text = string.Format("{0}/{1}", numOfCorrect, numOfTasks);
             otherUCList[4].Controls.Find("lblResultPercent", true).FirstOrDefault().Text = resultPerc.ToString("P", CultureInfo.InvariantCulture);
-            otherUCList[4].Location = new Point(350, 110);
+
+            if (Screen.PrimaryScreen.Bounds.Width == 1366 && Screen.PrimaryScreen.Bounds.Height == 768) otherUCList[4].Location = new Point(270, 100);
+            else otherUCList[4].Location = new Point(350, 110); // default
+
+            panelsList[1].BringToFront();
         }
 
         public void Speak(string input) //Reads the answer
