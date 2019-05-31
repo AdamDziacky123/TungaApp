@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AbsolventskaApp
+namespace TungaApp
 {
-    public partial class StartUserControl : UserControl// : MyUserControl
+    public partial class StartUserControl : UserControl
     {
         Manager manager = Manager.GetInstance();
 
@@ -22,7 +15,6 @@ namespace AbsolventskaApp
         private void btnStart_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            //manager.otherUCList[1].BringToFront();
             manager.otherUCList[1].Visible = true;
             manager.BringControlToFront(1, false);
             manager.SetPanels(1, false);

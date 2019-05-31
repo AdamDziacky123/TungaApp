@@ -1,4 +1,4 @@
-﻿namespace AbsolventskaApp
+﻿namespace TungaApp
 {
     partial class StartUserControl
     {

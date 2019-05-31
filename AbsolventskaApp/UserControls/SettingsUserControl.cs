@@ -3,12 +3,11 @@ using System.Windows.Forms;
 using System.Speech.Synthesis;
 
 
-namespace AbsolventskaApp.UserControls 
+namespace TungaApp.UserControls 
 {
-
     public partial class SettingsUserControl : UserControl
     {
-        Manager manager = Manager.GetInstance(); // Changing path option is here because not every PC will have an editor
+        Manager manager = Manager.GetInstance();
 
         public SettingsUserControl()
         {

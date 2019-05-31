@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AbsolventskaApp
+namespace TungaApp
 {
     static class Program
     {
@@ -19,7 +19,7 @@ namespace AbsolventskaApp
             Application.Run(new Form1());
         }
 
-        [System.Runtime.InteropServices.DllImport("user64.dll")]
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool SetProcessDPIAware();
     }
 }

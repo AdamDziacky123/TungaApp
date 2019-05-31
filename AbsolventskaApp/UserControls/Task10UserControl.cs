@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace AbsolventskaApp.UserControls
+namespace TungaApp.UserControls
 {
     public partial class Task10UserControl : UserControl
     {

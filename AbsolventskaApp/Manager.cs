@@ -8,7 +8,7 @@ using System.Globalization;
 using System.Resources;
 using System.IO;
 
-namespace AbsolventskaApp
+namespace TungaApp
 {
     public class Manager
     {

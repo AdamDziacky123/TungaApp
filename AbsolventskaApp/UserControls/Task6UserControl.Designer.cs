@@ -1,4 +1,4 @@
-﻿namespace AbsolventskaApp.UserControls
+﻿namespace TungaApp.UserControls
 {
     partial class Task6UserControl
     {

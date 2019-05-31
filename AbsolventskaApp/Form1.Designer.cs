@@ -1,4 +1,4 @@
-﻿namespace AbsolventskaApp
+﻿namespace TungaApp
 {
     partial class Form1
     {
@@ -60,31 +60,31 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.startUserControl1 = new AbsolventskaApp.StartUserControl();
-            this.task9UserControl1 = new AbsolventskaApp.UserControls.Task9UserControl();
-            this.task8UserControl1 = new AbsolventskaApp.UserControls.Task8UserControl();
-            this.task7UserControl1 = new AbsolventskaApp.UserControls.Task7UserControl();
-            this.task6UserControl1 = new AbsolventskaApp.UserControls.Task6UserControl();
-            this.task5UserControl1 = new AbsolventskaApp.UserControls.Task5UserControl();
-            this.task4UserControl1 = new AbsolventskaApp.UserControls.Task4UserControl();
-            this.task2UserControl1 = new AbsolventskaApp.UserControls.Task2UserControl();
-            this.task3UserControl1 = new AbsolventskaApp.UserControls.Task3UserControl();
-            this.task1UserControl1 = new AbsolventskaApp.UserControls.Task1UserControl();
-            this.task20UserControl1 = new AbsolventskaApp.UserControls.Task20UserControl();
-            this.task19UserControl1 = new AbsolventskaApp.UserControls.Task19UserControl();
-            this.task18UserControl1 = new AbsolventskaApp.UserControls.Task18UserControl();
-            this.task17UserControl1 = new AbsolventskaApp.UserControls.Task17UserControl();
-            this.task16UserControl1 = new AbsolventskaApp.UserControls.Task16UserControl();
-            this.task15UserControl1 = new AbsolventskaApp.UserControls.Task15UserControl();
-            this.task14UserControl1 = new AbsolventskaApp.UserControls.Task14UserControl();
-            this.task13UserControl1 = new AbsolventskaApp.UserControls.Task13UserControl();
-            this.task12UserControl1 = new AbsolventskaApp.UserControls.Task12UserControl();
-            this.task11UserControl1 = new AbsolventskaApp.UserControls.Task11UserControl();
-            this.task10UserControl1 = new AbsolventskaApp.UserControls.Task10UserControl();
-            this.resultUserControl1 = new AbsolventskaApp.UserControls.ResultUserControl();
-            this.assessUserControl1 = new AbsolventskaApp.UserControls.AssessUserControl();
-            this.menuUserControl1 = new AbsolventskaApp.UserControls.MenuUserControl();
-            this.settingsUserControl1 = new AbsolventskaApp.UserControls.SettingsUserControl();
+            this.startUserControl1 = new TungaApp.StartUserControl();
+            this.task9UserControl1 = new TungaApp.UserControls.Task9UserControl();
+            this.task8UserControl1 = new TungaApp.UserControls.Task8UserControl();
+            this.task7UserControl1 = new TungaApp.UserControls.Task7UserControl();
+            this.task6UserControl1 = new TungaApp.UserControls.Task6UserControl();
+            this.task5UserControl1 = new TungaApp.UserControls.Task5UserControl();
+            this.task4UserControl1 = new TungaApp.UserControls.Task4UserControl();
+            this.task2UserControl1 = new TungaApp.UserControls.Task2UserControl();
+            this.task3UserControl1 = new TungaApp.UserControls.Task3UserControl();
+            this.task1UserControl1 = new TungaApp.UserControls.Task1UserControl();
+            this.task20UserControl1 = new TungaApp.UserControls.Task20UserControl();
+            this.task19UserControl1 = new TungaApp.UserControls.Task19UserControl();
+            this.task18UserControl1 = new TungaApp.UserControls.Task18UserControl();
+            this.task17UserControl1 = new TungaApp.UserControls.Task17UserControl();
+            this.task16UserControl1 = new TungaApp.UserControls.Task16UserControl();
+            this.task15UserControl1 = new TungaApp.UserControls.Task15UserControl();
+            this.task14UserControl1 = new TungaApp.UserControls.Task14UserControl();
+            this.task13UserControl1 = new TungaApp.UserControls.Task13UserControl();
+            this.task12UserControl1 = new TungaApp.UserControls.Task12UserControl();
+            this.task11UserControl1 = new TungaApp.UserControls.Task11UserControl();
+            this.task10UserControl1 = new TungaApp.UserControls.Task10UserControl();
+            this.resultUserControl1 = new TungaApp.UserControls.ResultUserControl();
+            this.assessUserControl1 = new TungaApp.UserControls.AssessUserControl();
+            this.menuUserControl1 = new TungaApp.UserControls.MenuUserControl();
+            this.settingsUserControl1 = new TungaApp.UserControls.SettingsUserControl();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo)).BeginInit();
             this.panel1.SuspendLayout();
